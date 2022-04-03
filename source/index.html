@@ -5,13 +5,13 @@
     <title>HTML Academy: Пинк</title>
   </head>
   <body class="page__body">
-    <header class="main-header">
-      <a class="main-header__logo" href="index.html" aria-label="Переход на главную страницу">
-        <img src="./img/logo-pink.svg" width="74" height="23" alt="логотип Pink»">
-      </a>
-      <nav class="navigation">
-        <button class="navigation__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
-        <div class="navigation__wrapper">
+    <div class="main-intro">
+      <header class="main-header">
+        <a class="main-header__logo" href="index.html" aria-label="Переход на главную страницу">
+          <img src="./img/logo-pink.svg" width="74" height="23" alt="Логотип Pink.">
+        </a>
+        <nav class="navigation">
+          <button class="navigation__toggle" type="button" aria-label="Открыть/закрыть меню"></button>
           <ul class="navigation__list">
             <li class="navigation__list__item navigation__list__item--active">
               <a href="index.html">
@@ -34,36 +34,36 @@
               </a>
             </li>
           </ul>
-        </div>
-      </nav>
-      <h1 class="visually-hidden">Фоторедактор Пинк - раскрась серые будни</h1>
-      <div class="page-header__store store">
+        </nav>
+      </header>
+      <section class="store">
+        <h1 class="visually-hidden">Фоторедактор Пинк - раскрась серые будни</h1>
         <div class="store__content">
           <p class="store__title">Взгляните на жизнь иначе!</p>
           <a class="store__button button button-rounded" href="">Скачать приложение</a>
           <ul class="store__list">
             <li class="store__item">
               <a class="store__link" href="#" aria-label="apple">
-                <img src="" width="46" height="57" alt="App Store">
+                <img src="#" width="46" height="57" alt="App Store.">
               </a>
             </li>
             <li class="store__item">
               <a class="store__link" href="#" aria-label="Android">
-                <img src="" width="42" height="47" alt="Android icon">
+                <img src="#" width="42" height="47" alt="Android icon.">
               </a>
             </li>
             <li class="store__item">
               <a class="store__link" href="#" aria-label="Windows">
-                <img src="" width="44" height="42" alt="windows icon">
-              </a>
+                <img src="#" width="44" height="42" alt="windows icon.">
+             </a>
             </li>
           </ul>
-          <p class="store__description">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
-        </div>
-      </div>
-    </header>
+            <p class="store__description">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+          </div>
+        </section>
+    </div>
     <main class="index-main">
-     <section class="features">
+      <section class="features">
       <h2 class="visually-hidden">Преимущества</h2>
       <p class="index-main__title">Устали от серости мегаполиса?</p>
       <p class="index-main__title">Нам есть, что вам предложить!</p>
@@ -81,20 +81,21 @@
           <p class="features__item-text">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
         </li>
       </ul>
+      </section>
       <section class="reviews">
-        <div class="reviews-wrapper slider-reviews">
+        <div class="reviews__wrapper">
           <h2 class="visually-hidden">Отзывы</h2>
-          <div class="slider-reviews__item slider-reviews__item--current">
-            <p class="slider-reviews__author">Николай Петров</p>
-            <p class="slider-reviews__author-description">25 лет, водитель трамвая</p>
-            <blockquote class="slider-reviews__quote">
-              <p class="slider-reviews__quote-text">Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!</p>
+          <div class="reviews__item review-slide review-slide--current">
+            <p class="review-slide__author">Николай Петров</p>
+            <p class="review-slide__author-description">25 лет, водитель трамвая</p>
+            <blockquote class="review-slide__quote">
+              <p class="review-slide__quote-text">Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!</p>
             </blockquote>
           </div>
-          <div class="reviews__toggles slider__toggles">
-            <button class="slider__toggle slider__toggle--current" type="button" aria-label="1"></button>
-            <button class="slider__toggle" type="button" aria-label="2"></button>
-            <button class="slider__toggle" type="button" aria-label="3"></button>
+          <div class="reviews__pagination slider-pagination">
+            <button class="slider-pagination__control slider-pagination__control--current" type="button" aria-label="Слайд 1"></button>
+            <button class="slider-pagination__control" type="button" aria-label="Слайд 2"></button>
+            <button class="slider-pagination__control" type="button" aria-label="Слайд 3"></button>
           </div>
         </div>
       </section>
@@ -201,13 +202,10 @@
             </tbody>
           </table>
 
-          <div class="price__slider-controls slider-controls">
-            <button class="slider-controls__button" type="button" aria-label="1">
-            </button>
-            <button class="slider-controls__button slider-controls__button--current" type="button" aria-label="2">
-            </button>
-            <button class="slider-controls__button" type="button" aria-label="3">
-            </button>
+          <div class="price__pagination slider-pagination">
+            <button class="slider-pagination__control" type="button" aria-label="Слайд 1"></button>
+            <button class="slider-pagination__control slider-pagination__control--current" type="button" aria-label="Слайд 2"></button>
+            <button class="slider-pagination__control" type="button" aria-label="Слайд 3"></button>
           </div>
         </div>
       </section>
@@ -215,34 +213,29 @@
       <section class="contacts">
         <h2 class="visually-hidden">Контакты</h2>
         <p class="contacts__title">Остались вопросы? Свяжитесь с нами!</p>
-        <dl class="contacts__list">
-          <div class="contacts__item contacts__item--phone">
-            <dt class="contacts__list-term">Звоните:</dt>
-            <dd class="contacts__list-description">
-              <a class="contacts__list-link" href="tel:+78125556666">+7 (812) 555-66-66</a>
-            </dd>
-          </div>
-          <div class="contacts__item contacts__item--email">
-            <dt class="contacts__list-term">Пишите:</dt>
-            <dd class="contacts__list-description">
-              <a class="contacts__list-link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-            </dd>
-          </div>
-          <div class="contacts__item contacts__item--address">
-            <dt class="contacts__list-term">Приезжайте в гости:</dt>
-            <dd class="contacts__list-description">
-              <address class="contacts__list-address">ул. Большая Конюшенная, 19/8</address>
-            </dd>
-          </div>
-        </dl>
-      </section>
+        <ul class="contacts__list">
+          <li class="contacts__item contacts__item--phone">
+            <h3 class="contacts__list-term">Звоните:</h3>
+            <a class="contacts__list-link" href="tel:+78125556666">+7 (812) 555-66-66</a>
+          </li>
+          <li class="contacts__item contacts__item--email">
+            <h3 class="contacts__list-term">Пишите:</h3>
+            <a class="contacts__list-link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+          </li>
+          <li class="contacts__item contacts__item--address">
+            <h3 class="contacts__list-term">Приезжайте в гости:</h3>
+            <address class="contacts__list-address">ул. Большая Конюшенная, 19/8</address>
+          </li>
+        </ul>
+
 
       <div class="map">
       </div>
+      </section>
     </main>
 
     <footer class="page-footer">
-      <div class="page-footer_wrapper">
+      <div class="page-footer__wrapper">
         <a class="footer-logo" href="#" aria-label="Логотип сайта Pink">
           <svg class="footer-logo__svg">
           </svg>
