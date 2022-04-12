@@ -1,0 +1,41 @@
+.reviews__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.reviews__item {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  padding: 50px 20px 44px 20px;
+}
+
+.review-slide__author {
+  margin: 0;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+  align-self: center;
+  margin-bottom: 31px;
+}
+
+.review-slide__author-description {
+  margin: 0;
+}
+
+.review-slide__quote {
+  margin: 0;
+}
+
+.review-slide__quote-text {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: center;
+}
+
+.reviews__pagination {
+  align-self: center;
+  margin-bottom: 10px;
+}

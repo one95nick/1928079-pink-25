@@ -1,5 +1,9 @@
 .header {
-    background-color: rgba($color: #000000, $alpha: 0.3);
-    padding: 21px 20px;
+  background-color: rgba($color: #000000, $alpha: 0.3);
+}
+
+.header-wrapper {
+  display: flex;
+  padding: 21px 20px 21px 20px;
 }
 

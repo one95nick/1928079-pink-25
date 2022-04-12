@@ -5,16 +5,19 @@
     <title>HTML Academy: Пинк</title>
     <link rel="stylesheet" href="./css/style.css">
   </head>
-  <body class="page__body">
-    <div class="contest-intro">
+  <body class="page__body page__body--mobile">
+    <div class="intro">
       <header class="header">
-        <a class="header__logo" href="index.html" aria-label="Переход на главную страницу">
-          <img src="./img/svg/logo-pink.svg" width="74" height="23" alt="Логотип Pink.">
-        </a>
-        <nav class="navigation">
-          <button class="navigation__toggle" type="button" aria-label="Открыть/закрыть меню"></button>
-          <ul class="navigation__list">
-            <li class="navigation__list__item">
+        <div class="header-wrapper">
+          <a class="header__logo" href="index.html" aria-label="Переход на главную страницу">
+            <img src="./img/svg/logo-pink.svg" width="74" height="23" alt="Логотип Pink.">
+          </a>
+          <button class="navigation-toggle" type="button" aria-label="Открыть/закрыть меню"></button>
+        </div>
+        <nav class="navigation navigation--mobile">
+          <!-- при нажатии кнопки класс "navigation--mobile-hidden" меняется на класс "navigation--mobile-show" -->
+          <ul class="navigation__list navigation--mobile-hidden">
+            <li class="navigation__list__item navigation__list__item--active">
               <a href="index.html">
                 Главная
               </a>
@@ -24,27 +27,23 @@
                 Фотографии
               </a>
             </li>
-            <li class="navigation__list__item navigation__list__item--active">
-              <a href="contest.html">
+            <li class="navigation__list__item">
+              <a href="">
                 Конкурс
               </a>
             </li>
             <li class="navigation__list__item">
-              <a href="https://htmlacademy.ru">
+              <a href="">
                 HTML Academy
               </a>
             </li>
           </ul>
         </nav>
       </header>
-      <div class="contest-title">
-        <h1 class="contest-title__text">Конкурс на самое безбашенное путешествие с Пинк</h1>
-      </div>
+      <h1 class="contest-title">Конкурс на самое безбашенное путешествие с Пинк</h1>
     </div>
     <main class="contest">
-      <div class="contest__title">
-      <h2 class="contest__title__text">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</h2>
-      </div>
+      <h2 class="contest__description">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</h2>
 
       <form class="contest__form" action="https://echo.htmlacademy.ru/" method="post">
 
