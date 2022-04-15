@@ -3,11 +3,12 @@
 }
 
 .contacts__title {
-  font-size: 24px;
-  line-height: 29px;
-  font-weight: 300;
   margin: 0;
   margin-bottom: 45px;
+
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 29px;
   text-align: center;
 }
 
@@ -15,30 +16,31 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  list-style-type: none;
   margin: 0;
   padding: 0;
+
+  list-style-type: none;
 }
 
-.contacts__list-text {
-  font-size: 18px;
-  line-height: 25px;
+.contacts__term {
   margin: 0;
   margin-bottom: 13px;
+
+  font-size: 18px;
+  line-height: 25px;
   text-align: center;
 }
 
-.contacts__list-link,
-.contacts__list-address {
+.contacts__description {
+  margin: 0;
+
+  font-weight: 300;
   font-size: 24px;
   line-height: 33px;
-  font-weight: 300;
-  color:#d22856;
   text-align: center;
-  margin: 0;
+  color: $cerise;
 }
 
-.contacts__list-link {
+.contacts__description:not(:last-child) {
   margin-bottom: 35px;
 }
-

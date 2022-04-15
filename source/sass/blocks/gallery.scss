@@ -1,0 +1,36 @@
+.gallery {
+  padding-top: 54px;
+  padding-bottom: 52px;
+
+  background-color: $white;
+}
+
+.gallery__intro-text {
+  margin: 0;
+  margin-bottom: 60px;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 30px;
+  text-align: center;
+}
+
+.gallery__list {
+  display: grid;
+  margin: 0;
+  padding: 0 20px 0 20px;
+
+
+  list-style-type: none;
+
+  gap: 20px;
+}
+
+.gallery__item-article {
+  max-width: 300px;
+}
+
+.gallery__item--main {
+  margin-bottom: 20px;
+}
+

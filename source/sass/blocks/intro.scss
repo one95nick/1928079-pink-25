@@ -1,22 +1,25 @@
 .intro {
+  background-color: $midnight;
   background-image: url("./source/img/backgrounds/intro-background-mobile.jpg");
   background-repeat: no-repeat;
-  background-color: #3b3a3d;
 }
 
-.main-title,
-.contest-title,
-.catalog-title {
-  font-size: 24px;
-  font-weight: 300;
-  line-height: 33px;
+.intro__title {
   margin: 0;
   padding: 0;
+
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 33px;
   text-align: center;
-  color: #ffffff;
+  color: $white;
 }
 
-.main-title {
-  line-height: 29px;
-  padding: 29px 20px 320px 20px;
+.intro__title--main {
+  padding: 29px 30px 320px 30px;
 }
+
+.intro__title--inner {
+  padding: 36px 46px 51px 46px;
+}
+

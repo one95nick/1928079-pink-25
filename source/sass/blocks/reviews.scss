@@ -10,27 +10,31 @@
   padding: 50px 20px 44px 20px;
 }
 
-.review-slide__author {
+.reviews__author {
+  align-self: center;
   margin: 0;
+  margin-bottom: 31px;
+
+  font-weight: 700;
   font-size: 18px;
   line-height: 30px;
-  font-weight: 700;
+}
+
+.reviews__author-description {
+  display: none;
   align-self: center;
-  margin-bottom: 31px;
-}
-
-.review-slide__author-description {
   margin: 0;
 }
 
-.review-slide__quote {
+.reviews__quote {
   margin: 0;
 }
 
-.review-slide__quote-text {
+.reviews__quote-text {
   margin: 0;
-  font-size: 14px;
+
   font-weight: 400;
+  font-size: 14px;
   line-height: 30px;
   text-align: center;
 }
