@@ -1,0 +1,29 @@
+.button {
+  display: block;
+
+  font-weight: 700;
+  font-size: 18px;
+  text-align: center;
+
+  background-color: transparent;
+  border: none;
+
+
+  &--rounded {
+    padding-top: 17px;
+    padding-bottom: 17px;
+    line-height: 18px;
+
+    border-radius: 29px;
+    width: 280px;
+  }
+
+  &--squared {
+    line-height: 30px;
+    color: $color-white;
+    width: 280px;
+    background-color: $color-green;
+    padding-top: 17px;
+    padding-bottom: 17px;
+  }
+}

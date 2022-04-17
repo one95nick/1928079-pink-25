@@ -1,0 +1,28 @@
+.navigation--hidden {
+  display: none;
+}
+
+.navigation--mobile-show {
+  display: block;
+}
+
+.navigation__list {
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
+  font-weight: 700;
+  line-height: 32px;
+  color: $color-white;
+}
+
+.navigation__list-item {
+  padding-top: 25px;
+  padding-bottom: 25px;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  background: $color-midnight;
+  box-shadow: 0 1px 0 $color-black;
+}

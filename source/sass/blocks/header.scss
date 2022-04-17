@@ -1,0 +1,12 @@
+.header {
+  background-color: rgba($color-black, 0.3);
+}
+
+.header__wrapper {
+  display: flex;
+  padding: 21px 20px 21px 20px;
+}
+
+.header__toggle {
+  margin-left: auto;
+}

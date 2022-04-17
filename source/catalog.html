@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html class="page" lang="ru">
+<html class="page"  lang="ru">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Academy: Пинк</title>
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/style.css">
   </head>
   <body class="page__body">
     <div class="intro">
@@ -32,10 +32,10 @@
         <nav class="navigation navigation--mobile navigation--hidden">
           <!-- при нажатии кнопки класс "navigation--mobile-hidden" меняется на класс "navigation--mobile-show" -->
           <ul class="navigation__list">
-            <li class="navigation__list-item navigation__list-item--active">
+            <li class="navigation__list-item">
               <a href="index.html"> Главная </a>
             </li>
-            <li class="navigation__list-item">
+            <li class="navigation__list-item navigation__list-item--active">
               <a href="catalog.html"> Фотографии </a>
             </li>
             <li class="navigation__list-item">
@@ -47,294 +47,176 @@
           </ul>
         </nav>
       </header>
-      <h1 class="visually-hidden">Фоторедактор Пинк - раскрась серые будни</h1>
-      <p class="intro__title intro__title--main">Взгляните на жизнь иначе!</p>
+      <h1 class="intro__title intro__title--inner">Фотографии Пользователей</h1>
     </div>
-    <main class="index-main">
-      <section class="store">
-        <div class="store__content">
-          <a class="store__button button button--rounded" href=""
-            >Скачать приложение</a
-          >
-          <ul class="store__list">
-            <li class="store__item">
-              <a class="store__link" href="#" aria-label="apple">
-                <img src="#" width="46" height="57" alt="App Store." />
-              </a>
-            </li>
-            <li class="store__item">
-              <a class="store__link" href="#" aria-label="Android">
-                <img src="#" width="42" height="47" alt="Android icon." />
-              </a>
-            </li>
-            <li class="store__item">
-              <a class="store__link" href="#" aria-label="Windows">
-                <img src="#" width="44" height="42" alt="windows icon." />
-              </a>
-            </li>
-          </ul>
-          <p class="store__description">
-            Доступно для iPhone, iPad, Android, Windows&nbspPhone, OS X, Windows 8
-          </p>
+    <main>
+      <section class="gallery">
+        <div class="gallery__intro">
+          <h2 class="visually-hidden">Галлерея</h2>
+          <p class="gallery__intro-text">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
         </div>
-      </section>
-      <section class="features">
-        <div class="features__title-wrapper">
-          <h2 class="visually-hidden">Преимущества</h2>
-          <p class="features__title">Устали от серости мегаполиса?</p>
-          <p class="features__title">Нам есть, что вам предложить!</p>
+
+        <div class="gallery__item--main photo">
+          <img class="photo__image" src="./img/" width="320" height="137" alt="Панорама гор.">
+          <div class="photo__wrapper">
+            <div class="photo__author">
+              <p class="photo__author-name">Анна</p>
+              <time class="photo__date" datetime="2022-04-04T07:00">(5 минут назад)</time>
+            </div>
+            <p class="photo__text">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямуютрансляцию в перископе, задавайте свои вопросы!
+            </p>
+            <div class="photo__likes">
+              <button class="photo__like-button" type="button" aria-label="Нравится!"></button>
+              <span class="photo__like-count">Нравится: 215</span>
+            </div>
+          </div>
         </div>
-        <ul class="features__list">
-          <li class="features__item">
-            <h3 class="features__item-title">Поднимает настроение</h3>
-            <p class="features__item-text">
-              Приложение позволит вам победить осеннюю хандру и депрессию
-              буквально в несколько кликов!
-            </p>
+
+        <ul class="gallery__list">
+          <li class="gallery__item">
+            <article class="gallery__item-article photo">
+              <h3 class="visually-hidden">Фото от Левона</h3>
+              <img class="photo__image " src="./img/" width="280" height="180" alt="Съемки автомобиля.">
+              <div class="photo__wrapper">
+                <div class="photo__author">
+                  <p class="photo__author-name">Левон</p>
+                  <time class="photo__date" datetime="2022-04-04T07:00">(5 часов назад)</time>
+                </div>
+                <p class="photo__text">Вчера он на луну летал, сегодня в руки к нам попал.
+                </p>
+                <div class="photo__likes">
+                  <button class="photo__like-button" type="button" aria-label="Нравится!"></button>
+                  <span class="photo__like-count">Нравится: 356</span>
+                </div>
+              </div>
+            </article>
           </li>
-          <li class="features__item">
-            <h3 class="features__item-title">Меняет мир вокруг</h3>
-            <p class="features__item-text">
-              Сделайте снимок и украсьте его смайликом или текстовой подписью,
-              чтобы усилить эффект
-            </p>
+
+          <li class="gallery__item">
+            <article class="gallery__item-article photo">
+              <h3 class="visually-hidden">Фото от Антона</h3>
+              <img class="photo__image " src="./img/" width="280" height="180" alt="Барабанная установка.">
+              <div class="photo__wrapper">
+                <div class="photo__author">
+                  <p class="photo__author-name">Антон</p>
+                  <time class="photo__date" datetime="2022-04-04T07:00">(12 часов назад)</time>
+                </div>
+                <p class="photo__text">Соседи будут рады!
+                </p>
+                <div class="photo__likes">
+                  <button class="photo__like-button" type="button" aria-label="Нравится!"></button>
+                  <span class="photo__like-count">Нравится: 666</span>
+                </div>
+              </div>
+            </article>
           </li>
-          <li class="features__item">
-            <h3 class="features__item-title">Заводит новых друзей</h3>
-            <p class="features__item-text">
-              Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и
-              заводите новых
-            </p>
+
+          <li class="gallery__item">
+            <article class="gallery__item-article photo">
+              <h3 class="visually-hidden">Фото от Бориса</h3>
+              <img class="photo__image " src="./img/" width="280" height="180" alt="Стеклянная крыша.">
+              <div class="photo__wrapper">
+                <div class="photo__author">
+                  <p class="photo__author-name">Борис</p>
+                  <time class="photo__date" datetime="2022-04-04T07:00">(20 часов назад)</time>
+                </div>
+                <p class="photo__text">Здесь могла быть ваша цитата о высоком и вечном.
+                </p>
+                <div class="photo__likes">
+                  <button class="photo__like-button" type="button" aria-label="Нравится!"></button>
+                  <span class="photo__like-count">Нравится: 215</span>
+                </div>
+              </div>
+            </article>
+          </li>
+
+          <li class="gallery__item">
+            <article class="gallery__item-article photo">
+              <h3 class="visually-hidden">Фото от Сергея</h3>
+              <img class="photo__image " src="./img/" width="280" height="180" alt="Ярмарка.">
+              <div class="photo__wrapper">
+                <div class="photo__author">
+                  <p class="photo__author-name">Сергей</p>
+                  <time class="photo__date" datetime="2022-04-04T07:00">(25 часов назад)</time>
+                </div>
+                <p class="photo__text">Самая кубанская в мире!
+                </p>
+                <div class="photo__likes">
+                  <button class="photo__like-button" type="button" aria-label="Нравится!"></button>
+                  <span class="photo__like-count">Нравится: 4</span>
+                </div>
+              </div>
+            </article>
+          </li>
+
+          <li class="gallery__item">
+            <article class="gallery__item-article photo">
+              <h3 class="visually-hidden">Фото от Максима</h3>
+              <img class="photo__image " src="./img/" width="280" height="180" alt="На вершине горы.">
+              <div class="photo__wrapper">
+                <div class="photo__author">
+                  <p class="photo__author-name">Максим</p>
+                  <time class="photo__date" datetime="2022-04-04T07:00">(40 часов назад)</time>
+                </div>
+                <p class="photo__text">Где снег-то?
+                </p>
+                <div class="photo__likes">
+                  <button class="photo__like-button" type="button" aria-label="Нравится!"></button>
+                  <span class="photo__like-count">Нравится: 150</span>
+                </div>
+              </div>
+            </article>
+         </li>
+
+          <li class="gallery__item">
+            <article class="gallery__item-article photo">
+              <h3 class="visually-hidden">Фото от Надежды</h3>
+              <img class="photo__image " src="./img/" width="280" height="180" alt="Вид из самолета.">
+              <div class="photo__wrapper">
+                <div class="photo__author">
+                  <p class="photo__author-name">Надежда</p>
+                  <time class="photo__date" datetime="2022-04-04T07:00">(45 часов назад)</time>
+                </div>
+                <p class="photo__text">Всем GM и взаимные лайки!
+                </p>
+                <div class="photo__likes">
+                  <button class="photo__like-button" type="button" aria-label="Нравится!"></button>
+                  <span class="photo__like-count">Нравится: 2560</span>
+                </div>
+              </div>
+            </article>
           </li>
         </ul>
-      </section>
-      <section class="reviews">
-        <div class="reviews__wrapper">
-          <h2 class="visually-hidden">Отзывы</h2>
-          <div class="reviews__item reviews__item--current">
-            <p class="reviews__author">Николай Петров</p>
-            <p class="reviews__author-description">
-              25 лет, водитель трамвая
-            </p>
-            <blockquote class="reviews__quote">
-              <p class="reviews__quote-text">
-                «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
-              </p>
-            </blockquote>
+        </section>
+
+      <section class="upload">
+        <h2 class="upload__title">Затмите их всех! Выкладывайте&nbsp;все,&nbsp;что&nbsp;накопилось&nbsp;в телефоне!</h2>
+        <form class="upload__form" action="https://echo.htmlacademy.ru/" enctype="multipart/form-data" method="post">
+          <input class="upload__form-field" type="file" id="image" name="image" accept="image/*" aria-label="Выберите файл">
+          <div class="upload__form-controls">
+            <div class="upload__controls-wrapper">
+              <button class="upload__controls-button upload__controls-button--current" type="button" aria-label="Обрезать">
+                <svg class="upload__controls-button-icon" width="44" height="44">
+                </svg>
+              </button>
+              <input class="upload__controls-range" type="range" min="1" max="100" name="range" value="15">
+              <button class="upload__controls-button" type="button" aria-label="Насыщенность">
+                <svg class="upload__controls-button-icon" width="48" height="43">
+                </svg>
+              </button>
+              <input class="upload__controls-range" type="range" min="1" max="100" name="range" value="50">
+              <button class="upload__controls-button" type="button" aria-label="Контрастность">
+                <svg class="upload__controls-button-icon" width="32" height="32">
+                </svg>
+              </button>
+              <input class="upload__controls-range" type="range" min="1" max="100" name="range" value="85">
+            </div>
+            <div class="upload__form-buttons">
+              <button class="upload__form-submit button button--rounded" type="submit">Запостить</button>
+              <button class="upload__form-reset button button--rounded" type="reset">Отмена</button>
+            </div>
           </div>
-          <div class="reviews__pagination slider-pagination">
-            <button
-              class="slider-pagination__control slider-pagination__control--current"
-              type="button"
-              aria-label="Слайд 1"
-            ></button>
-            <button
-              class="slider-pagination__control"
-              type="button"
-              aria-label="Слайд 2"
-            ></button>
-            <button
-              class="slider-pagination__control"
-              type="button"
-              aria-label="Слайд 3"
-            ></button>
-          </div>
-        </div>
-      </section>
-
-      <section class="price" id="price">
-        <h2 class="visually-hidden">Цена подписки</h2>
-        <div class="price__slider content-wrapper">
-          <table class="price__table table-price">
-            <thead>
-              <tr>
-                <th class="table-price__header"></th>
-                <th class="table-price__header">
-                  <span class="table-price__license-type">База</span>
-                  <span class="table-price__license-price">1,99 USD</span>
-                </th>
-                <th
-                  class="table-price__header table-price__header--hit"
-                  data-hit-text="Хит"
-                >
-                  <span class="table-price__license-type">Стандарт</span>
-                  <span class="table-price__license-price">3,99 USD</span>
-                </th>
-                <th class="table-price__header">
-                  <span class="table-price__license-type">Анлим</span>
-                  <span class="table-price__license-price">9,99 USD</span>
-                </th>
-              </tr>
-            </thead>
-
-            <tbody>
-              <tr>
-                <td class="table-price__cell">Розовый фильтр</td>
-                <td class="table-price__cell">
-                  <div
-                    class="table-price__feature"
-                    data-feature-name="Розовый фильтр"
-                  >
-                    <span
-                      class="table-price__feature-value table-price__feature-value--true"
-                    >
-                      <span class="visually-hidden">Да</span>
-                    </span>
-                  </div>
-                </td>
-                <td class="table-price__cell">
-                  <div
-                    class="table-price__feature"
-                    data-feature-name="Розовый фильтр"
-                  >
-                    <span
-                      class="table-price__feature-value table-price__feature-value--true"
-                    >
-                      <span class="visually-hidden">Да</span>
-                    </span>
-                  </div>
-                </td>
-                <td class="table-price__cell">
-                  <div
-                    class="table-price__feature"
-                    data-feature-name="Розовый фильтр"
-                  >
-                    <span
-                      class="table-price__feature-value table-price__feature-value--true"
-                    >
-                      <span class="visually-hidden">Да</span>
-                    </span>
-                  </div>
-                </td>
-              </tr>
-
-              <tr>
-                <td class="table-price__cell">Смайлики</td>
-                <td class="table-price__cell">
-                  <div
-                    class="table-price__feature"
-                    data-feature-name="Смайлики"
-                  >
-                    <span
-                      class="table-price__feature-value table-price__feature-value--false"
-                    >
-                      <span class="visually-hidden">Нет</span>
-                    </span>
-                  </div>
-                </td>
-                <td class="table-price__cell">
-                  <div
-                    class="table-price__feature"
-                    data-feature-name="Смайлики"
-                  >
-                    <span
-                      class="table-price__feature-value table-price__feature-value--true"
-                    >
-                      <span class="visually-hidden">Да</span>
-                    </span>
-                  </div>
-                </td>
-                <td class="table-price__cell">
-                  <div
-                    class="table-price__feature"
-                    data-feature-name="Смайлики"
-                  >
-                    <span
-                      class="table-price__feature-value table-price__feature-value--true"
-                    >
-                      <span class="visually-hidden">Да</span>
-                    </span>
-                  </div>
-                </td>
-              </tr>
-
-              <tr>
-                <td class="table-price__cell">Комментарии</td>
-                <td class="table-price__cell">
-                  <div
-                    class="table-price__feature"
-                    data-feature-name="Комментарии"
-                  >
-                    <span
-                      class="table-price__feature-value table-price__feature-value--false"
-                    >
-                      <span class="visually-hidden">Нет</span>
-                    </span>
-                  </div>
-                </td>
-                <td class="table-price__cell">
-                  <div
-                    class="table-price__feature"
-                    data-feature-name="Комментарии"
-                  >
-                    <span
-                      class="table-price__feature-value table-price__feature-value--false"
-                    >
-                      <span class="visually-hidden">Нет</span>
-                    </span>
-                  </div>
-                </td>
-                <td class="table-price__cell">
-                  <div
-                    class="table-price__feature"
-                    data-feature-name="Комментарии"
-                  >
-                    <span
-                      class="table-price__feature-value table-price__feature-value--true"
-                    >
-                      <span class="visually-hidden">Да</span>
-                    </span>
-                  </div>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-
-          <div class="price__pagination slider-pagination">
-            <button
-              class="slider-pagination__control"
-              type="button"
-              aria-label="Слайд 1"
-            ></button>
-            <button
-              class="slider-pagination__control slider-pagination__control--current"
-              type="button"
-              aria-label="Слайд 2"
-            ></button>
-            <button
-              class="slider-pagination__control"
-              type="button"
-              aria-label="Слайд 3"
-            ></button>
-          </div>
-        </div>
-      </section>
-
-      <section class="contacts">
-        <h2 class="visually-hidden">Контакты</h2>
-        <p class="contacts__title">Остались вопросы? Свяжитесь с нами!</p>
-        <ul class="contacts__list">
-          <li class="contacts__item">
-            <h3 class="contacts__term">Звоните:</h3>
-            <a class="contacts__description" href="tel:+78125556666"
-              >+7 (812) 555-66-66</a
-            >
-          </li>
-          <li class="contacts__item">
-            <h3 class="contacts__term">Пишите:</h3>
-            <a class="contacts__description" href="mailto:mail@htmlacademy.ru"
-              >mail@htmlacademy.ru</a
-            >
-          </li>
-          <li class="contacts__item">
-            <h3 class="contacts__term">Приезжайте в гости:</h3>
-            <p class="contacts__description">
-              ул. Большая Конюшенная, 19/8
-            </p>
-          </li>
-        </ul>
-
-        <div class="map"></div>
+        </form>
       </section>
     </main>
 
@@ -408,5 +290,6 @@
         </div>
       </div>
     </footer>
+
   </body>
 </html>

@@ -1,0 +1,46 @@
+.page-footer__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page-footer__logo {
+  margin-bottom: 30px;
+}
+
+.page-footer__social {
+  display: grid;
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
+
+  list-style-type: none;
+
+  gap: 10px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.page-footer__social-item {
+  position: relative;
+
+  width: 54px;
+  height: 54px;
+
+  border: solid 2px #283645;
+  border-radius: 50%;
+}
+
+.page-footer__social-icon {
+  position: absolute;
+  top: 30%;
+  left: 30%;
+}
+
+.page-footer__copyright {
+  display: flex;
+  align-content: center;
+}
+
+.page-footer__copyright-text {
+  display: block;
+}

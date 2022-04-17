@@ -1,0 +1,49 @@
+.upload {
+  padding: 49px 0 41px 0;
+}
+
+.upload__title {
+  margin: 0;
+  margin-bottom: 52px;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+}
+
+.upload__form {
+  padding: 20px;
+
+  background-color: $color-white-smoke;
+}
+
+.upload__form-field {
+  margin-bottom: 43px;
+}
+
+.upload__controls-wrapper {
+  display: grid;
+  margin-bottom: 34px;
+  // grid-template-columns: repeat(3, 1fr);
+  // пока не понял как их расположить из-за разных версий сайта (один рэйнж или три)
+}
+
+.upload__form-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.upload__form-submit {
+  margin-bottom: 12px;
+
+  color: $color-cerise;
+
+  border: 3px solid $color-cerise;
+}
+
+.upload__form-reset {
+  border: 3px solid $color-midnight;
+  opacity: 0.1;
+}

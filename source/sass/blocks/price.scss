@@ -1,0 +1,14 @@
+.price {
+  padding: 159px 20px 98px 20px;
+
+  background-color: $color-white-smoke;
+}
+
+.price__slider {
+  display: flex;
+  flex-direction: column;
+}
+
+.price__pagination {
+  align-self: center;
+}
