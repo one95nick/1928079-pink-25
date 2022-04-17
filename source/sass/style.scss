@@ -1,7 +1,7 @@
-@import "./global/buttons.scss";
+@import "./variables.scss";
+@import "./blocks/buttons.scss";
 @import "./global/reboot.scss";
 @import "./global/utils.scss";
-@import "./variables.scss";
 @import "./blocks/header.scss";
 @import "./blocks/naviagtion.scss";
 @import "./blocks/intro.scss";
@@ -16,3 +16,4 @@
 @import "./blocks/photo.scss";
 @import "./blocks/upload.scss";
 @import "./blocks/contest.scss";
+@import "./blocks/modal-form.scss";

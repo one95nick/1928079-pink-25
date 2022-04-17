@@ -1,6 +1,8 @@
 .reviews__wrapper {
   display: flex;
   flex-direction: column;
+
+  color: $color-midnight;
 }
 
 .reviews__item {

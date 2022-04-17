@@ -1,3 +1,164 @@
-.contest {
-  padding: 54px 20px 26px 20px;
+.contest__description {
+  font-size: 14px;
+  line-height: 30px;
+  font-weight: 400;
+  text-align: center;
+  padding: 54px 20px 55px 20px;
+  margin: 0;
+}
+
+.contest__form-fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contest__form-name {
+  padding: 54px 20px 44px 20px;
+}
+
+.contest__name-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contest__name-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.contest__name-label {
+  font-size: 14px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: $color-cerise;
+}
+
+.contest__name-input {
+  width: 276px;
+  min-height: 59px;
+  padding: 20px;
+  font: inherit;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.contest__form-achievments {
+  padding: 42px 20px 50px 20px;
+  background-color: $color-white-smoke;
+}
+
+.contest__legend {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  color: $color-cerise;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 55px;
+}
+
+.contest__achievments-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.contest__achievments-item {
+  margin-bottom: 50px;
+}
+
+.contest__achievments-label {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 400;
+  color: $color-midnight;
+  margin-left: 22px;
+}
+
+.contest__form-contacts {
+  padding: 42px 20px 50px 20px;
+}
+
+.contest__contacts-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.contest__contacts-input {
+  width: 276px;
+  min-height: 59px;
+  padding: 20px;
+  font: inherit;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.contest__contacts-label {
+  font-size: 14px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: $color-cerise;
+}
+
+.contest__form-platform {
+  padding: 42px 20px 42px 20px;
+  background-color: $color-white-smoke;
+}
+
+.contest__platform-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.contest__platform-item {
+  margin-bottom: 50px;
+}
+
+.contest__platform-label {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 400;
+  color: $color-midnight;
+  margin-left: 22px;
+}
+
+.contest__form-emotions {
+  padding: 42px 20px 42px 20px;
+}
+
+.contest__emotions-textarea {
+  width: 276px;
+  min-height: 176px;
+  padding: 22px 25px 22px 20px;
+  font: inherit;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 400;
+  color: $color-midnight;
+  margin-bottom: 52px;
+}
+
+.contest__form-submit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 66px;
+}
+
+.contest__submit-button {
+  margin-bottom: 46px;
+}
+
+.contest__submit-notification {
+  font: inherit;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.contest__star-required {
+  color: $color-cerise;
 }

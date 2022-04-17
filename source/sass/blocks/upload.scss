@@ -5,15 +5,17 @@
 .upload__title {
   margin: 0;
   margin-bottom: 52px;
+
+  font-weight: 400;
   font-size: 14px;
   line-height: 24px;
-  font-weight: 400;
   text-align: center;
 }
 
 .upload__form {
-  background-color: $white-smoke;
   padding: 20px;
+
+  background-color: $color-white-smoke;
 }
 
 .upload__form-field {
@@ -34,12 +36,14 @@
 }
 
 .upload__form-submit {
-  color: $cerise;
-  border: 3px solid $cerise;
   margin-bottom: 12px;
+
+  color: $color-cerise;
+
+  border: 3px solid $color-cerise;
 }
 
 .upload__form-reset {
-  border: 3px solid $midnight;
+  border: 3px solid $color-midnight;
   opacity: 0.1;
 }

@@ -13,7 +13,7 @@
   list-style-type: none;
   font-weight: 700;
   line-height: 32px;
-  color: $white;
+  color: $color-white;
 }
 
 .navigation__list-item {
@@ -23,6 +23,6 @@
   text-align: center;
   text-transform: uppercase;
 
-  background: $midnight;
-  box-shadow: 0 1px 0 $black;
+  background: $color-midnight;
+  box-shadow: 0 1px 0 $color-black;
 }

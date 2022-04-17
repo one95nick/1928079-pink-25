@@ -1,5 +1,5 @@
 .intro {
-  background-color: $midnight;
+  background-color: $color-midnight;
   background-image: url("./source/img/backgrounds/intro-background-mobile.jpg");
   background-repeat: no-repeat;
 }
@@ -12,7 +12,7 @@
   font-size: 24px;
   line-height: 33px;
   text-align: center;
-  color: $white;
+  color: $color-white;
 }
 
 .intro__title--main {
@@ -22,4 +22,3 @@
 .intro__title--inner {
   padding: 36px 46px 51px 46px;
 }
-
