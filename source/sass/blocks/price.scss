@@ -11,4 +11,8 @@
 
 .price__pagination {
   align-self: center;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 }

@@ -1,0 +1,34 @@
+.effect {
+  display: none;
+  padding: 100px 20px 100px 330px;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: $color-midnight;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 500px;
+  }
+}
+
+.effect__title {
+  margin: 0;
+
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+}
+
+.effect__text {
+  margin: 0;
+}
+
+.effect__link {
+  color: $color-cerise;
+  text-decoration: underline;
+}

@@ -1,5 +1,9 @@
 .contacts {
   padding: 20px;
+
+  @media (min-width: $tablet-width) {
+    padding: 55px 67px 20px 67px;
+  }
 }
 
 .contacts__title {
@@ -20,6 +24,26 @@
   padding: 0;
 
   list-style-type: none;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+
+    gap: 68px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.contacts__item {
+  @media (min-width: $tablet-width) {
+    margin-right: auto;
+    margin-left: auto;
+  }
 }
 
 .contacts__term {

@@ -26,6 +26,10 @@
   display: none;
   align-self: center;
   margin: 0;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
 }
 
 .reviews__quote {
@@ -44,4 +48,8 @@
 .reviews__pagination {
   align-self: center;
   margin-bottom: 10px;
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
 }

@@ -6,6 +6,10 @@
   text-align: center;
 
   background-color: $color-white;
+
+  @media (min-width: $desktop-width) {
+    padding: 77px 130px 67px 130px;
+  }
 }
 
 .features__title {
@@ -25,6 +29,18 @@
   list-style-type: none;
 
   background-color: $color-white-smoke;
+
+  @media (min-width: $tablet-width) {
+    padding: 20px 130px 20px 330px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    padding: 77px 130px 67px 130px;
+
+    gap: 68px;
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .features__item {

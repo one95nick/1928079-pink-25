@@ -4,6 +4,17 @@
   color: $color-white;
 
   background-color: $color-blue-charcoal;
+
+  @media (min-width: $tablet-width) {
+    max-width: 50%;
+
+    background: transparent;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 30%;
+    padding-left: 130px;
+  }
 }
 
 .store__content {
@@ -39,4 +50,8 @@
   font-size: 14px;
   line-height: 24px;
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 100px;
+  }
 }

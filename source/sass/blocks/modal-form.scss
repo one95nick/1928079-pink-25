@@ -7,17 +7,19 @@
 
 .modal-form__title {
   margin: 0;
+  margin-bottom: 37px;
+
+  font-weight: 700;
   font-size: 18px;
   line-height: 24px;
-  font-weight: 700;
-  margin-bottom: 37px;
 }
 
 .modal-form__text {
   margin: 0;
+
+  font-weight: 400;
   font-size: 14px;
   line-height: 24px;
-  font-weight: 400;
   text-align: center;
 
   &--failure {
@@ -27,5 +29,6 @@
 
 .modal-form__button-wrapper {
   padding: 52px 22px;
+
   background-color: $color-white-smoke;
 }

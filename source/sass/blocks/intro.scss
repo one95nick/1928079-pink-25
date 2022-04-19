@@ -1,7 +1,21 @@
 .intro {
+  @media (min-width: $tablet-width) {
+    background-color: $color-midnight;
+    background-image: url("../img/backgrounds/intro-background-mobile.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+.intro__wrapper {
   background-color: $color-midnight;
-  background-image: url("./source/img/backgrounds/intro-background-mobile.jpg");
+  background-image: url("../img/backgrounds/intro-background-mobile.jpg");
   background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-width: $tablet-width) {
+    background: transparent;
+  }
 }
 
 .intro__title {
@@ -16,9 +30,31 @@
 }
 
 .intro__title--main {
-  padding: 29px 30px 320px 30px;
+  padding: 29px 30px 32px 30px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 130px;
+
+    font-size: 50px;
+    line-height: 68px;
+  }
 }
 
 .intro__title--inner {
   padding: 36px 46px 51px 46px;
+}
+
+.intro__description {
+  @media (min-width: $tablet-width) {
+    max-width: 50%;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 30%;
+  }
 }
