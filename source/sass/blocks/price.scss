@@ -1,7 +1,11 @@
 .price {
-  padding: 159px 20px 98px 20px;
+  padding: 159px 0 98px 0;
 
   background-color: $color-white-smoke;
+
+  @media (min-width: $tablet-width) {
+    padding: 70px 0;
+  }
 }
 
 .price__slider {

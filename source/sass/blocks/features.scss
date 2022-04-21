@@ -1,14 +1,16 @@
 .features__title-wrapper {
   display: flex;
   flex-direction: column;
-  padding: 46px 20px 10px 20px;
+  padding-top: 25px;
+  padding-bottom: 30px;
 
   text-align: center;
 
   background-color: $color-white;
 
   @media (min-width: $desktop-width) {
-    padding: 77px 130px 67px 130px;
+    padding-top: 77px;
+    padding-bottom: 67px;
   }
 }
 
@@ -20,23 +22,42 @@
   font-weight: 300;
   font-size: 24px;
   line-height: 29px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 40px;
+    line-height: 55px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 50px;
+    line-height: 68px;
+  }
+}
+
+.features__title:last-of-type {
+  @media (min-width: $tablet-width) {
+    padding-right: 20%;
+    padding-left: 20%;
+  }
+}
+
+.features__list-wrapper {
+  background-color: $color-white-smoke;
 }
 
 .features__list {
   margin: 0;
-  padding: 100px 20px 20px 20px;
+  padding: 95px 0 20px 0;
 
   list-style-type: none;
 
-  background-color: $color-white-smoke;
-
   @media (min-width: $tablet-width) {
-    padding: 20px 130px 20px 330px;
+    padding: 150px 5% 49px 50%;
   }
 
   @media (min-width: $desktop-width) {
     display: grid;
-    padding: 77px 130px 67px 130px;
+    padding: 77px 0 67px 0;
 
     gap: 68px;
     grid-template-columns: repeat(3, 1fr);
@@ -47,6 +68,23 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 43px;
+
+  @media (min-width: $tablet-width) {
+    align-items: flex-start;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 300px;
+  }
+}
+
+.features__item:last-child {
+  margin-bottom: 300px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+  }
 }
 
 .features__item-title {
@@ -57,13 +95,29 @@
   font-weight: 700;
   font-size: 18px;
   line-height: 24px;
+
+  @media (min-width: $desktop-width) {
+    font-size: 30px;
+    line-height: 30px;
+    text-align: center;
+  }
 }
 
 .features__item-text {
-  margin-bottom: 43px;
+  margin: 0;
 
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    text-align: left;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: center;
+    font-size: 18px;
+    line-height: 30px;
+  }
 }
