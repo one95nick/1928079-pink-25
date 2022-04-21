@@ -1,16 +1,18 @@
 .contest__description {
+  margin: 0;
+  padding: 54px 20px 55px 20px;
+
+  font-weight: 400;
   font-size: 14px;
   line-height: 30px;
-  font-weight: 400;
   text-align: center;
-  padding: 54px 20px 55px 20px;
-  margin: 0;
 }
 
 .contest__form-fieldset {
-  border: none;
-  padding: 0;
   margin: 0;
+  padding: 0;
+
+  border: none;
 }
 
 .contest__form-name {
@@ -18,9 +20,10 @@
 }
 
 .contest__name-list {
-  list-style-type: none;
-  padding: 0;
   margin: 0;
+  padding: 0;
+
+  list-style-type: none;
 }
 
 .contest__name-item {
@@ -31,14 +34,15 @@
 .contest__name-label {
   font-size: 14px;
   line-height: 30px;
-  text-transform: uppercase;
   color: $color-cerise;
+  text-transform: uppercase;
 }
 
 .contest__name-input {
   width: 276px;
   min-height: 59px;
   padding: 20px;
+
   font: inherit;
   font-size: 18px;
   line-height: 30px;
@@ -46,23 +50,26 @@
 
 .contest__form-achievments {
   padding: 42px 20px 50px 20px;
+
   background-color: $color-white-smoke;
 }
 
 .contest__legend {
+  margin-bottom: 55px;
+
+  font-weight: 400;
   font-size: 14px;
   line-height: 18px;
-  font-weight: 400;
-  color: $color-cerise;
   text-align: center;
+  color: $color-cerise;
   text-transform: uppercase;
-  margin-bottom: 55px;
 }
 
 .contest__achievments-list {
-  list-style-type: none;
   margin: 0;
   padding: 0;
+
+  list-style-type: none;
 }
 
 .contest__achievments-item {
@@ -70,11 +77,12 @@
 }
 
 .contest__achievments-label {
+  margin-left: 22px;
+
+  font-weight: 400;
   font-size: 18px;
   line-height: 30px;
-  font-weight: 400;
   color: $color-midnight;
-  margin-left: 22px;
 }
 
 .contest__form-contacts {
@@ -82,15 +90,17 @@
 }
 
 .contest__contacts-list {
-  list-style-type: none;
   margin: 0;
   padding: 0;
+
+  list-style-type: none;
 }
 
 .contest__contacts-input {
   width: 276px;
   min-height: 59px;
   padding: 20px;
+
   font: inherit;
   font-size: 18px;
   line-height: 30px;
@@ -99,19 +109,21 @@
 .contest__contacts-label {
   font-size: 14px;
   line-height: 30px;
-  text-transform: uppercase;
   color: $color-cerise;
+  text-transform: uppercase;
 }
 
 .contest__form-platform {
   padding: 42px 20px 42px 20px;
+
   background-color: $color-white-smoke;
 }
 
 .contest__platform-list {
-  list-style-type: none;
   margin: 0;
   padding: 0;
+
+  list-style-type: none;
 }
 
 .contest__platform-item {
@@ -119,11 +131,12 @@
 }
 
 .contest__platform-label {
+  margin-left: 22px;
+
+  font-weight: 400;
   font-size: 18px;
   line-height: 30px;
-  font-weight: 400;
   color: $color-midnight;
-  margin-left: 22px;
 }
 
 .contest__form-emotions {
@@ -133,13 +146,14 @@
 .contest__emotions-textarea {
   width: 276px;
   min-height: 176px;
+  margin-bottom: 52px;
   padding: 22px 25px 22px 20px;
+
   font: inherit;
+  font-weight: 400;
   font-size: 18px;
   line-height: 30px;
-  font-weight: 400;
   color: $color-midnight;
-  margin-bottom: 52px;
 }
 
 .contest__form-submit {
@@ -154,9 +168,10 @@
 }
 
 .contest__submit-notification {
+  margin: 0;
+
   font: inherit;
   text-transform: uppercase;
-  margin: 0;
 }
 
 .contest__star-required {

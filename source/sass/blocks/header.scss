@@ -4,9 +4,30 @@
 
 .header__wrapper {
   display: flex;
+  align-items: center;
   padding: 21px 20px 21px 20px;
+
+  @media (min-width: $desktop-width) {
+    padding: 27px 130px 43px 130px;
+  }
 }
 
 .header__toggle {
   margin-left: auto;
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
+.header__logo-mobile {
+  display: block;
+}
+
+.header__logo-tablet {
+  display: none;
+}
+
+.header__logo-desktop {
+  display: none;
 }

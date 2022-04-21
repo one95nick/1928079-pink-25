@@ -2,6 +2,18 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
 }
 
 .page-footer__logo {
@@ -20,13 +32,14 @@
   grid-template-columns: repeat(3, 1fr);
 }
 
-.page-footer__social-item {
+.page-footer__social-link {
   position: relative;
 
+  display: block;
   width: 54px;
   height: 54px;
 
-  border: solid 2px #283645;
+  border: solid 3px rgba($color-midnight, 0.1);
   border-radius: 50%;
 }
 

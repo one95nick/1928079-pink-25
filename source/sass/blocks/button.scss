@@ -10,20 +10,23 @@
 
 
   &--rounded {
+    width: 280px;
     padding-top: 17px;
     padding-bottom: 17px;
+
     line-height: 18px;
 
     border-radius: 29px;
-    width: 280px;
   }
 
   &--squared {
-    line-height: 30px;
-    color: $color-white;
     width: 280px;
-    background-color: $color-green;
     padding-top: 17px;
     padding-bottom: 17px;
+
+    line-height: 30px;
+    color: $color-white;
+
+    background-color: $color-green;
   }
 }

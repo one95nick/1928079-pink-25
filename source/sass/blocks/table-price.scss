@@ -1,7 +1,30 @@
+.table-price__header-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 19px 95px 30px 95px;
+
+  color: $color-white;
+  text-transform: uppercase;
+
+  background-color: $color-midnight;
+  border: 2px solid $color-midnight;
+
+
+  @media (min-width: $tablet-width) {
+    padding: 19px 15% 16px 15%;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 23px 67px 25px 67px;
+  }
+}
+
 .table-price__license-type {
   font-weight: 700;
   font-size: 16px;
   line-height: 30px;
+  color: $color-white;
 }
 
 .table-price__license-price {
@@ -14,5 +37,18 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 30px;
-  text-transform: uppercase;
+
+  background-color: $color-white;
+  border: 2px solid $color-whisper;
+
+  @media (min-width: $tablet-width) {
+    width: 152px;
+    padding: 18px 15px 17px 15px;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 233px;
+
+    font-size: 18px;
+  }
 }

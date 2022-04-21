@@ -1,9 +1,16 @@
-.navigation--hidden {
-  display: none;
-}
+.navigation {
+  &--closed {
+    display: none;
+  }
 
-.navigation--mobile-show {
-  display: block;
+  &--opened {
+    display: block;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    margin-left: auto;
+  }
 }
 
 .navigation__list {
@@ -14,6 +21,12 @@
   font-weight: 700;
   line-height: 32px;
   color: $color-white;
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: space-between;
+    min-width: 620px;
+  }
 }
 
 .navigation__list-item {
@@ -25,4 +38,11 @@
 
   background: $color-midnight;
   box-shadow: 0 1px 0 $color-black;
+
+  @media (min-width: $desktop-width) {
+    padding: 10px;
+
+    background: transparent;
+    box-shadow: none;
+  }
 }

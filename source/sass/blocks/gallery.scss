@@ -29,6 +29,8 @@
   max-width: 300px;
 }
 
-.gallery__item--main {
-  margin-bottom: 20px;
+.gallery__item {
+  &--main {
+    margin-bottom: 20px;
+  }
 }
