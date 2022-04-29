@@ -1204,14 +1204,17 @@ body {
 .gallery__item {
   max-width: 300px;
 }
-.gallery__item--main {
-  margin-bottom: 20px;
-}
 @media (min-width: 660px) {
   .gallery__item {
     height: 455px;
   }
-  .gallery__item--main {
+}
+
+.gallery__item-main {
+  margin-bottom: 20px;
+}
+@media (min-width: 660px) {
+  .gallery__item-main {
     margin-bottom: 50px;
   }
 }

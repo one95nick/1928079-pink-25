@@ -43,15 +43,15 @@
 .gallery__item {
   max-width: 300px;
 
-  &--main {
-    margin-bottom: 20px;
-  }
-
   @media (min-width: $tablet-width) {
     height: 455px;
+  }
+}
 
-    &--main {
-      margin-bottom: 50px;
-    }
+.gallery__item-main {
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 50px;
   }
 }
