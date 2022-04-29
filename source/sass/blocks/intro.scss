@@ -1,4 +1,6 @@
 .intro {
+  overflow: hidden;
+
   @media (min-width: $tablet-width) {
     background-color: $color-midnight;
     background-image: url("../img/backgrounds/intro-background-mobile.jpg");
@@ -57,6 +59,18 @@
   }
 
   &--inner {
-    padding: 36px 46px 51px 46px;
+    padding: 36px 26px 51px 26px;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 50px;
+    line-height: 68px;
+    padding-top: 81px;
+    padding-bottom: 74px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 74px;
+    padding-bottom: 104px;
   }
 }

@@ -1,7 +1,9 @@
 .navigation {
-  &--closed {
-    display: none;
-  }
+  width: 100vw;
+  left: 50%;
+  top: 60px;
+  position: absolute;
+  transform: translateX(-50%);
 
   &--opened {
     display: block;
@@ -10,6 +12,8 @@
   @media (min-width: $desktop-width) {
     display: block;
     margin-left: auto;
+    position: static;
+    transform: translateX(0);
   }
 }
 
@@ -30,8 +34,8 @@
 }
 
 .navigation__list-item {
-  padding-top: 25px;
-  padding-bottom: 25px;
+  padding-top: 15px;
+  padding-bottom: 15px;
 
   text-align: center;
   text-transform: uppercase;

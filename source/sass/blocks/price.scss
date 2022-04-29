@@ -1,7 +1,10 @@
 .price {
   padding: 159px 0 98px 0;
+  overflow: hidden;
 
   background-color: $color-white-smoke;
+
+  clip-path: polygon(0 5%, 100% 0, 100% 100%, 0% 100%);
 
   @media (min-width: $tablet-width) {
     padding: 70px 0;
@@ -19,4 +22,10 @@
   @media (min-width: $tablet-width) {
     display: none;
   }
+}
+
+.price__table {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 }

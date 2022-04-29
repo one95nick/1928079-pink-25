@@ -1,6 +1,6 @@
 .effect {
   display: none;
-  padding: 100px 0 100px 50%;
+  // padding: 100px 0 100px 50%;
 
   font-weight: 400;
   font-size: 14px;
@@ -12,8 +12,12 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-left: 50%;
+    background-color: $color-white-smoke;
   }
+}
+
+.effect__wrapper {
+  padding: 100px 0 100px 50%;
 }
 
 .effect__title {
