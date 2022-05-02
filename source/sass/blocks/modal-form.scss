@@ -1,3 +1,13 @@
+.modal-form {
+  display: none;
+  position: absolute;
+
+  @media (min-width: $tablet-width) {
+    width: 460px;
+    margin: 0 auto;
+  }
+}
+
 .modal-form__wrapper {
   display: flex;
   flex-direction: column;
