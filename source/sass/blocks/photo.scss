@@ -6,11 +6,22 @@
   color: $color-midnight;
 
   background-color: $color-white-smoke;
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+    min-height: 155px;
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .photo__author {
   display: flex;
   margin-bottom: 14px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+  }
 }
 
 .photo__author-name {
@@ -29,15 +40,36 @@
 .photo__text {
   margin: 0;
   margin-bottom: 27px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 10px;
+  }
 }
 
 .photo__likes {
   display: flex;
   align-content: center;
+
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    bottom: 20px;
+
+    &--main {
+      top: 32px;
+      right: 20px;
+    }
+  }
 }
 
 .photo__like-button {
   margin-right: 18px;
+  width: 12px;
+  height: 20px;
+
+  @media (min-width: $tablet-width) {
+    order: 2;
+    margin-right: 0;
+  }
 }
 
 .photo__like-count {
@@ -45,4 +77,12 @@
   font-size: 12px;
   color: $color-cerise;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 140px;
+
+    &--main {
+      margin-right: 20px;
+    }
+  }
 }

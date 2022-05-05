@@ -13,24 +13,43 @@
   font-size: 14px;
   line-height: 30px;
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
+    padding: 0 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 150px;
+  }
 }
 
 .gallery__list {
   display: grid;
-  margin: 0;
-  padding: 0 20px 0 20px;
-
+  margin: 0 auto;
   list-style-type: none;
 
   gap: 20px;
-}
 
-.gallery__item-article {
-  max-width: 300px;
+  @media (min-width: $tablet-width) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .gallery__item {
-  &--main {
-    margin-bottom: 20px;
+  @media (min-width: $tablet-width) {
+    min-height: 455px;
+  }
+}
+
+.gallery__item-main {
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 50px;
   }
 }

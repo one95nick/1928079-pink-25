@@ -18,6 +18,26 @@
 
 .page-footer__logo {
   margin-bottom: 30px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+  }
+}
+
+.page-footer__svg {
+  &--mobile {
+    @media (min-width: $desktop-width) {
+      display: none;
+    }
+  }
+
+  &--desktop {
+    display: none;
+
+    @media (min-width: $desktop-width) {
+      display: block;
+    }
+  }
 }
 
 .page-footer__social {
@@ -30,6 +50,10 @@
 
   gap: 10px;
   grid-template-columns: repeat(3, 1fr);
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+  }
 }
 
 .page-footer__social-link {
@@ -51,7 +75,7 @@
 
 .page-footer__copyright {
   display: flex;
-  align-content: center;
+  align-items: center;
 }
 
 .page-footer__copyright-text {
