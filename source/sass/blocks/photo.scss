@@ -15,6 +15,27 @@
   }
 }
 
+.photo__image {
+  max-width: 280px;
+
+  @media (min-width: $tablet-width) {
+    max-width: 300px;
+  }
+
+  &--main {
+    max-width: 320px;
+    margin: 0 auto;
+
+    @media (min-width: $tablet-width) {
+      max-width: 660px;
+    }
+
+    @media (min-width: $desktop-width) {
+      max-width: 1200px;
+    }
+  }
+}
+
 .photo__author {
   display: flex;
   margin-bottom: 14px;
@@ -63,8 +84,14 @@
 
 .photo__like-button {
   margin-right: 18px;
-  width: 12px;
+  width: 14px;
   height: 20px;
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  background-image: url("../img/svg/heart.svg");
+  background-position: center;
+  background-repeat: no-repeat;
 
   @media (min-width: $tablet-width) {
     order: 2;

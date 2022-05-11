@@ -1,6 +1,8 @@
 .intro {
-  overflow: hidden;
   position: relative;
+  z-index: 1;
+
+  overflow: hidden;
 
   @media (min-width: $tablet-width) {
     background-color: $color-midnight;
@@ -26,13 +28,17 @@
       content: "";
       position: absolute;
       bottom: 0;
+      right: 0;
+      z-index: -1;
 
       width: 660px;
       height: 550px;
 
       background-image: url("../img/backgrounds/iphone-hand-tablet.png");
       background-repeat: no-repeat;
-      background-size: 660px 550px;
+      background-size: contain;
+
+      pointer-events: none;
 
       @media (min-resolution: 2dppx) {
         background-image: url("../img/backgrounds/iphone-hand-tablet@2x.png");
@@ -42,16 +48,17 @@
     @media (min-width: $desktop-width) {
       content: "";
       position: absolute;
+      right: 50%;
+      transform: translateX(56%);
       bottom: 0;
-      right: 0;
 
       width: 1050px;
       height: 645px;
 
       background-image: url("../img/backgrounds/iphone-hand-desktop.png");
       background-repeat: no-repeat;
-      background-size: 1050px 645px;
       background-position-x: center;
+      background-size: contain;
 
       @media (min-resolution: 2dppx) {
         background-image: url("../img/backgrounds/iphone-hand-desktop@2x.png");
@@ -61,11 +68,12 @@
 }
 
 .intro__wrapper {
+  position: relative;
+
   background-color: $color-midnight;
   background-image: url("../img/backgrounds/intro-background-mobile.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/backgrounds/intro-background-mobile@2x.jpg");
@@ -83,7 +91,7 @@
   }
 }
 
-.intro__wrapper::before {
+.intro__wrapper--main::before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -93,8 +101,8 @@
 
   background-image: url("../img/backgrounds/iphone-hand-mobile.png");
   background-repeat: no-repeat;
-  background-size: 258px 286px;
   background-position: center;
+  background-size: 258px 286px;
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/backgrounds/iphone-hand-mobile@2x.png");
@@ -123,7 +131,7 @@
 
     @media (min-width: $tablet-width) {
       margin: 0;
-
+      max-width: 300px;
       font-size: 40px;
       line-height: 48px;
     }
@@ -141,6 +149,11 @@
 
   &--inner {
     padding: 36px 26px 51px 26px;
+
+
+    @media (min-width: $tablet-width) {
+      max-width: 100%;
+    }
   }
 
   @media (min-width: $tablet-width) {
@@ -152,7 +165,6 @@
   }
 
   @media (min-width: $desktop-width) {
-    max-width: 100%;
     padding-top: 74px;
     padding-bottom: 104px;
   }

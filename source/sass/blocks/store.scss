@@ -13,15 +13,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 310px;
 
   @media (min-width: $tablet-width) {
-    align-items: flex-start;
-    padding-left: 0;
-    padding-right: 50%;
-  }
-
-  @media (min-width: $desktop-width) {
-    padding-right: 68%;
+    padding: 0;
   }
 }
 
@@ -59,9 +54,11 @@
   font-size: 14px;
   line-height: 24px;
   text-align: center;
+  max-width: 230px;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 100px;
+    max-width: 300px;
 
     font-size: 18px;
     z-index: 1;

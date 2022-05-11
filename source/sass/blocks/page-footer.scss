@@ -59,7 +59,9 @@
 .page-footer__social-link {
   position: relative;
 
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 54px;
   height: 54px;
 
@@ -69,8 +71,6 @@
 
 .page-footer__social-icon {
   position: absolute;
-  top: 30%;
-  left: 30%;
 }
 
 .page-footer__copyright {
@@ -80,4 +80,5 @@
 
 .page-footer__copyright-text {
   display: block;
+  margin-right: 10px;
 }
