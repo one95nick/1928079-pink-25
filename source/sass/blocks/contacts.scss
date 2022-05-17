@@ -92,4 +92,16 @@
   line-height: 33px;
   text-align: center;
   color: $color-cerise;
+
+  &--email {
+    &:hover {
+      color: $color-midnight;
+      text-decoration: underline;
+    }
+
+    &:active {
+      color: rgba($color-midnight, 0.3);
+      text-decoration: none;
+    }
+  }
 }

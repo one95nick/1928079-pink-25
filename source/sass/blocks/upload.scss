@@ -91,8 +91,8 @@
 
   @media (min-width: $tablet-width) {
     flex-direction: column;
-    min-height: 200px;
     width: 60px;
+    min-height: 200px;
     margin-bottom: 0;
   }
 }
@@ -109,8 +109,19 @@
 }
 
 .upload__controls-range {
+  position: relative;
+
   display: none;
   width: 100%;
+  height: 20px;
+  overflow: hidden;
+
+  background-color: transparent;
+  outline: none;
+
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 
   &--current {
     display: block;
@@ -118,6 +129,76 @@
 
   @media (min-width: $tablet-width) {
     display: block;
+  }
+}
+
+.upload__controls-range::-webkit-slider-runnable-track {
+  height: 2px;
+
+  background-color: $color-midnight;
+}
+
+.upload__controls-range::-webkit-slider-thumb {
+  z-index: 1;
+
+  width: 10px;
+  height: 10px;
+  margin-top: -4px;
+
+  background: $color-white;
+  border: 2px solid $color-cerise;
+  border-radius: 50%;
+  cursor: pointer;
+
+  -webkit-appearance: none;
+
+
+  &:active {
+    background-color: $color-cerise;
+  }
+}
+
+.upload__controls-range::-moz-range-track {
+  height: 2px;
+
+  background-color: $color-midnight;
+}
+
+
+.upload__controls-range::-moz-range-thumb {
+  width: 10px;
+  height: 10px;
+  margin: 0;
+  margin-top: -4px;
+  padding: 0;
+
+  background: $color-white;
+  border: 2px solid $color-cerise;
+  border-radius: 50%;
+  cursor: pointer;
+
+  -webkit-appearance: none;
+
+  &:active {
+    background-color: $color-cerise;
+  }
+}
+
+.upload__controls-range::before {
+  z-index: 1;
+  display: none;
+  position: absolute;
+  content: "";
+  height: 1px;
+  width: 275px;
+  background-color: rgba($color-midnight, 0.1);
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 410px;
   }
 }
 
@@ -140,21 +221,40 @@
 
 .upload__controls-button-icon {
   opacity: 0.3;
-  fill: $color-midnight;
 
-  &--current {
-    opacity: 1;
-    fill: $color-cerise;
-  }
+  fill: $color-midnight;
 
   @media (min-width: $tablet-width) {
     transform: scale(0.5);
     opacity: 1;
+
     fill: $color-cerise;
   }
 
   @media (min-width: $desktop-width) {
     transform: scale(1);
+  }
+
+  &:hover {
+    opacity: 0.5;
+
+    @media (min-width: $tablet-width) {
+      opacity: 1;
+    }
+  }
+
+  &--current {
+    opacity: 1;
+
+    fill: $color-cerise;
+
+    &:hover {
+      opacity: 1;
+
+      @media (min-width: $tablet-width) {
+        opacity: 1;
+      }
+    }
   }
 }
 
@@ -176,6 +276,16 @@
 
   border: 3px solid $color-cerise;
 
+  &:hover {
+    background-color: $color-cerise;
+    color: $color-white;
+  }
+
+  &:active {
+    background-color: $color-cerise;
+    color: rgba($color-white, 0.3);
+  }
+
   @media (min-width: $desktop-width) {
     width: 183px;
     margin-bottom: 0;
@@ -185,6 +295,16 @@
 .upload__form-reset {
   border: 3px solid $color-midnight;
   opacity: 0.1;
+
+  &:hover {
+    opacity: 0.3;
+  }
+
+  &:active {
+    opacity: 0.3;
+    background-color: $color-midnight;
+    color: $color-white;
+  }
 
   @media (min-width: $desktop-width) {
     width: 183px;

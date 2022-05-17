@@ -26,6 +26,16 @@
 
   border: 3px solid #ffffff;
 
+  &:hover {
+    background-color: $color-white;
+    color: $color-cerise;
+  }
+
+  &:active {
+    background-color: $color-white;
+    color: rgba($color-cerise, 0.3);
+  }
+
   @media (min-width: $tablet-width) {
     width: 300px;
     z-index: 1;

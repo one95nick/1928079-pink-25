@@ -8,8 +8,8 @@
     <link rel="preload" href="fonts/opensans.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/opensansbold.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/opensanslight.woff2" as="font" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
+    <link rel="stylesheet" href="./css/style.min.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon/favicon-32.png" />
   </head>
   <body class="page__body">
     <div class="intro">
@@ -30,12 +30,15 @@
               </svg>
             </a>
             <button class="header__toggle" type="button" aria-label="Открыть/закрыть меню">
-              <svg width="50" height="24">
-                <use href="./img/svg/sprite.svg#navigation-toggle"></use>
+              <svg class="header__open-icon" width="50" height="24">
+                <use href="./img/svg/sprite.svg#navigation-toggle-open"></use>
+              </svg>
+              <svg class="header__close-icon" width="23" height="23">
+                <use href="./img/svg/sprite.svg#navigation-toggle-close"></use>
               </svg>
             </button>
-            <!-- при нажатии кнопки добавляется класс "is-active" -->
-            <nav class="header__navigation navigation navigation--mobile">
+
+            <nav class="header__navigation navigation">
               <ul class="navigation__list">
                 <li class="navigation__list-item">
                   <a href="index.html"> Главная </a>
@@ -65,9 +68,12 @@
 
         <div class="gallery__item-main photo">
           <picture>
+            <source type="image/webp" media="(min-width: 1200px)" srcset="../img/content/panorama-desktop.webp 1x, ../img/content/panorama-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 660px)" srcset="../img/content/panorama-tablet.webp 1x, ../img/content/panorama-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="../img/content/panorama-mobile.webp 1x, ../img/content/panorama-mobile@2x.webp 2x">
             <source media="(min-width: 1200px)" srcset="../img/content/panorama-desktop.jpg 1x, ../img/content/panorama-desktop@2x.jpg 2x">
             <source media="(min-width: 660px)" srcset="../img/content/panorama-tablet.jpg 1x, ../img/content/panorama-tablet@2x.jpg 2x">
-          <img class="photo__image photo__image--main" srcset="../img/content/panorama-mobile.jpg 1x, ../img/content/panorama-mobile@2x.jpg 2x" alt="Панорама гор.">
+            <img class="photo__image photo__image--main" srcset="../img/content/panorama-mobile.jpg 1x, ../img/content/panorama-mobile@2x.jpg 2x" alt="Панорама гор.">
           </picture>
           <div class="container">
             <div class="photo__wrapper">
@@ -90,9 +96,12 @@
             <article class="gallery__item-article photo">
               <h3 class="visually-hidden">Фото от Левона</h3>
               <picture>
+                <source type="image/webp" media="(min-width: 1200px)" srcset="../img/content/car-desktop.webp 1x, ../img/content/car-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 660px)" srcset="../img/content/car-tablet.webp 1x, ../img/content/car-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="../img/content/car-mobile.webp 1x, ../img/content/car-mobile@2x.webp 2x">
                 <source media="(min-width: 1200px)" srcset="../img/content/car-desktop.jpg 1x, ../img/content/car-desktop@2x.jpg 2x">
                 <source media="(min-width: 660px)" srcset="../img/content/car-tablet.jpg 1x, ../img/content/car-tablet@2x.jpg 2x">
-              <img class="photo__image" srcset="../img/content/car-mobile.jpg 1x, ../img/content/car-mobile@2x.jpg 2x" alt="Съемки автомобиля.">
+                <img class="photo__image" srcset="../img/content/car-mobile.jpg 1x, ../img/content/car-mobile@2x.jpg 2x" alt="Съемки автомобиля.">
               </picture>
               <div class="photo__wrapper">
                 <div class="photo__author">
@@ -113,9 +122,12 @@
             <article class="gallery__item-article photo">
               <h3 class="visually-hidden">Фото от Антона</h3>
               <picture>
+                <source type="image/webp" media="(min-width: 1200px)" srcset="../img/content/drums-desktop.webp 1x, ../img/content/drums-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 660px)" srcset="../img/content/drums-tablet.webp 1x, ../img/content/drums-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="../img/content/drums-mobile.webp 1x, ../img/content/drums-mobile@2x.webp 2x">
                 <source media="(min-width: 1200px)" srcset="../img/content/drums-desktop.jpg 1x, ../img/content/drums-desktop@2x.jpg 2x">
                 <source media="(min-width: 660px)" srcset="../img/content/drums-tablet.jpg 1x, ../img/content/drums-tablet@2x.jpg 2x">
-              <img class="photo__image" srcset="../img/content/drums-mobile.jpg 1x, ../img/content/drums-mobile@2x.jpg 2x" alt="Барабанная установка.">
+                <img class="photo__image" srcset="../img/content/drums-mobile.jpg 1x, ../img/content/drums-mobile@2x.jpg 2x" alt="Барабанная установка.">
               </picture>
               <div class="photo__wrapper">
                 <div class="photo__author">
@@ -136,9 +148,12 @@
             <article class="gallery__item-article photo">
               <h3 class="visually-hidden">Фото от Бориса</h3>
               <picture>
+                <source type="image/webp" media="(min-width: 1200px)" srcset="../img/content/sky-desktop.webp 1x, ../img/content/sky-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 660px)" srcset="../img/content/sky-tablet.webp 1x, ../img/content/sky-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="../img/content/sky-mobile.webp 1x, ../img/content/sky-mobile@2x.webp 2x">
                 <source media="(min-width: 1200px)" srcset="../img/content/sky-desktop.jpg 1x, ../img/content/sky-desktop@2x.jpg 2x">
                 <source media="(min-width: 660px)" srcset="../img/content/sky-tablet.jpg 1x, ../img/content/sky-tablet@2x.jpg 2x">
-              <img class="photo__image" srcset="../img/content/sky-mobile.jpg 1x, ../img/content/sky-mobile@2x.jpg 2x" alt="Стеклянная крыша.">
+                <img class="photo__image" srcset="../img/content/sky-mobile.jpg 1x, ../img/content/sky-mobile@2x.jpg 2x" alt="Стеклянная крыша.">
               </picture>
               <div class="photo__wrapper">
                 <div class="photo__author">
@@ -159,9 +174,12 @@
             <article class="gallery__item-article photo">
               <h3 class="visually-hidden">Фото от Сергея</h3>
               <picture>
+                <source type="image/webp" media="(min-width: 1200px)" srcset="../img/content/market-desktop.webp 1x, ../img/content/market-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 660px)" srcset="../img/content/market-tablet.webp 1x, ../img/content/market-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="../img/content/market-mobile.webp 1x, ../img/content/market-mobile@2x.webp 2x">
                 <source media="(min-width: 1200px)" srcset="../img/content/market-desktop.jpg 1x, ../img/content/market-desktop@2x.jpg 2x">
                 <source media="(min-width: 660px)" srcset="../img/content/market-tablet.jpg 1x, ../img/content/market-tablet@2x.jpg 2x">
-              <img class="photo__image" srcset="../img/content/market-mobile.jpg 1x, ../img/content/market-mobile@2x.jpg 2x" alt="Ярмарка.">
+                <img class="photo__image" srcset="../img/content/market-mobile.jpg 1x, ../img/content/market-mobile@2x.jpg 2x" alt="Ярмарка.">
               </picture>
               <div class="photo__wrapper">
                 <div class="photo__author">
@@ -182,9 +200,12 @@
             <article class="gallery__item-article photo">
               <h3 class="visually-hidden">Фото от Максима</h3>
               <picture>
+                <source type="image/webp" media="(min-width: 1200px)" srcset="../img/content/rocks-desktop.webp 1x, ../img/content/rocks-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 660px)" srcset="../img/content/rocks-tablet.webp 1x, ../img/content/rocks-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="../img/content/rocks-mobile.webp 1x, ../img/content/rocks-mobile@2x.webp 2x">
                 <source media="(min-width: 1200px)" srcset="../img/content/rocks-desktop.jpg 1x, ../img/content/rocks-desktop@2x.jpg 2x">
                 <source media="(min-width: 660px)" srcset="../img/content/rocks-tablet.jpg 1x, ../img/content/rocks-tablet@2x.jpg 2x">
-              <img class="photo__image" srcset="../img/content/rocks-mobile.jpg 1x, ../img/content/rocks-mobile@2x.jpg 2x" alt="Горы.">
+                <img class="photo__image" srcset="../img/content/rocks-mobile.jpg 1x, ../img/content/rocks-mobile@2x.jpg 2x" alt="Горы.">
               </picture>
               <div class="photo__wrapper">
                 <div class="photo__author">
@@ -205,9 +226,12 @@
             <article class="gallery__item-article photo">
               <h3 class="visually-hidden">Фото от Надежды</h3>
               <picture>
+                <source type="image/webp" media="(min-width: 1200px)" srcset="../img/content/plane-desktop.webp 1x, ../img/content/plane-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 660px)" srcset="../img/content/plane-tablet.webp 1x, ../img/content/plane-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="../img/content/plane-mobile.webp 1x, ../img/content/plane-mobile@2x.webp 2x">
                 <source media="(min-width: 1200px)" srcset="../img/content/plane-desktop.jpg 1x, ../img/content/plane-desktop@2x.jpg 2x">
                 <source media="(min-width: 660px)" srcset="../img/content/plane-tablet.jpg 1x, ../img/content/plane-tablet@2x.jpg 2x">
-              <img class="photo__image" srcset="../img/content/plane-mobile.jpg 1x, ../img/content/plane-mobile@2x.jpg 2x" alt="Вид из самолета.">
+                <img class="photo__image" srcset="../img/content/plane-mobile.jpg 1x, ../img/content/plane-mobile@2x.jpg 2x" alt="Вид из самолета.">
               </picture>
               <div class="photo__wrapper">
                 <div class="photo__author">
@@ -232,9 +256,12 @@
           <div class="upload-wrapper">
             <input class="upload__form-field visually-hidden" type="file" id="image" name="image" accept="image/*" aria-label="Выберите файл">
             <picture>
+              <source type="image/webp" media="(min-width: 1200px)" srcset="../img/content/upload-example-desktop.webp 1x, ../img/content/upload-example-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 660px)" srcset="../img/content/upload-example-tablet.webp 1x, ../img/content/upload-example-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="../img/content/upload-example-mobile.webp 1x, ../img/content/upload-example-mobile@2x.webp 2x">
               <source media="(min-width: 1200px)" srcset="../img/content/upload-example-desktop.jpg 1x, ../img/content/upload-example-desktop@2x.jpg 2x">
               <source media="(min-width: 660px)" srcset="../img/content/upload-example-tablet.jpg 1x, ../img/content/upload-example-tablet@2x.jpg 2x">
-            <img class="upload__image" srcset="../img/content/upload-example-mobile.jpg 1x, ../img/content/upload-example-mobile@2x.jpg 2x" alt="Зимняя дорога.">
+              <img class="upload__image" srcset="../img/content/upload-example-mobile.jpg 1x, ../img/content/upload-example-mobile@2x.jpg 2x" alt="Зимняя дорога.">
             </picture>
             <div class="upload__form-controls">
               <div class="upload__controls-wrapper">
@@ -275,11 +302,11 @@
       <div class="page-footer__wrapper container">
         <a class="page-footer__logo" href="#" aria-label="Логотип сайта Pink">
 
-          <svg class="page-footer__svg page-footer__svg--mobile pink-logo" width="145" height="40">
+          <svg class="page-footer__svg page-footer__svg--mobile pink-logo pink-logo--footer" width="145" height="40">
             <use href="./img/svg/sprite.svg#footer-logo-mobile"></use>
           </svg>
 
-          <svg class="page-footer__svg page-footer__svg--desktop pink-logo" width="147" height="40">
+          <svg class="page-footer__svg page-footer__svg--desktop pink-logo pink-logo--footer" width="147" height="40">
             <use href="./img/svg/sprite.svg#footer-logo-desktop"></use>
           </svg>
 
@@ -319,6 +346,7 @@
         </div>
       </div>
     </footer>
+    <script src="./js/index.js"></script>
 
   </body>
 </html>

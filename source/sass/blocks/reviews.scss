@@ -112,3 +112,16 @@
     transform: rotate(180deg);
   }
 }
+
+.reviews__toggle-icon {
+  fill: $color-midnight;
+  opacity: 0.3;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.1;
+  }
+}

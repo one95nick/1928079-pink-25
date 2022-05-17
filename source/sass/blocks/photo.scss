@@ -23,12 +23,8 @@
   }
 
   &--main {
-    max-width: 320px;
+    min-width: 100%;
     margin: 0 auto;
-
-    @media (min-width: $tablet-width) {
-      max-width: 660px;
-    }
 
     @media (min-width: $desktop-width) {
       max-width: 1200px;

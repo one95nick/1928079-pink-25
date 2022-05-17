@@ -38,6 +38,19 @@
       display: block;
     }
   }
+
+  &--hit {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: url("../img/svg/hit.svg");
+      width: 74px;
+      height: 74px;
+      left: -1px;
+      top: 1px;
+    }
+  }
 }
 
 .table-price__license-type {

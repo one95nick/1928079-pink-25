@@ -8,8 +8,8 @@
     <link rel="preload" href="fonts/opensans.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/opensansbold.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/opensanslight.woff2" as="font" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
+    <link rel="stylesheet" href="./css/style.min.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon/favicon-32.png" />
   </head>
   <body class="page__body">
     <div class="intro">
@@ -30,20 +30,23 @@
               </svg>
             </a>
             <button class="header__toggle" type="button" aria-label="Открыть/закрыть меню">
-              <svg width="50" height="24">
-                <use href="./img/svg/sprite.svg#navigation-toggle"></use>
+              <svg class="header__open-icon" width="50" height="24">
+                <use href="./img/svg/sprite.svg#navigation-toggle-open"></use>
+              </svg>
+              <svg class="header__close-icon" width="23" height="23">
+                <use href="./img/svg/sprite.svg#navigation-toggle-close"></use>
               </svg>
             </button>
-            <!-- при нажатии кнопки добавляется класс "is-active" -->
-            <nav class="header__navigation navigation navigation--mobile">
+
+            <nav class="header__navigation navigation">
               <ul class="navigation__list">
                 <li class="navigation__list-item">
                   <a href="index.html"> Главная </a>
                 </li>
-                <li class="navigation__list-item navigation__list-item--active">
+                <li class="navigation__list-item">
                   <a href="catalog.html"> Фотографии </a>
                 </li>
-                <li class="navigation__list-item">
+                <li class="navigation__list-item navigation__list-item--active">
                   <a href="contest.html"> Конкурс </a>
                 </li>
                 <li class="navigation__list-item">
@@ -211,11 +214,11 @@
       <div class="page-footer__wrapper container">
         <a class="page-footer__logo" href="#" aria-label="Логотип сайта Pink">
 
-          <svg class="page-footer__svg page-footer__svg--mobile pink-logo" width="145" height="40">
+          <svg class="page-footer__svg page-footer__svg--mobile pink-logo pink-logo--footer" width="145" height="40">
             <use href="./img/svg/sprite.svg#footer-logo-mobile"></use>
           </svg>
 
-          <svg class="page-footer__svg page-footer__svg--desktop pink-logo" width="147" height="40">
+          <svg class="page-footer__svg page-footer__svg--desktop pink-logo pink-logo--footer" width="147" height="40">
             <use href="./img/svg/sprite.svg#footer-logo-desktop"></use>
           </svg>
 
@@ -274,4 +277,6 @@
       <button class="modal-form__button button button--squared modal-form__button-success">Закрыть окно</button>
       </div>
     </div>
+    <script src="./js/index.js"></script>
+
   </body>

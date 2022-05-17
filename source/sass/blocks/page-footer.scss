@@ -67,6 +67,15 @@
 
   border: solid 3px rgba($color-midnight, 0.1);
   border-radius: 50%;
+
+  &:hover {
+    border: solid 3px $color-midnight;
+  }
+
+  &:active {
+    border: solid 3px $color-midnight;
+    opacity: 0.1;
+  }
 }
 
 .page-footer__social-icon {
@@ -81,4 +90,17 @@
 .page-footer__copyright-text {
   display: block;
   margin-right: 10px;
+}
+
+.page-footer__copyright-icon {
+  fill: $color-cerise;
+
+  &:hover {
+    fill: $color-midnight;
+  }
+
+  &:active {
+    fill: $color-midnight;
+    opacity: 0.3;
+  }
 }

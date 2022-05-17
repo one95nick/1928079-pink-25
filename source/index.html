@@ -9,8 +9,8 @@
     <link rel="preload" href="fonts/opensans.woff2" as="font" crossorigin="anonymous" />
     <link rel="preload" href="fonts/opensansbold.woff2" as="font" crossorigin="anonymous" />
     <link rel="preload" href="fonts/opensanslight.woff2" as="font" crossorigin="anonymous" />
-    <link rel="stylesheet" href="./css/style.css" />
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
+    <link rel="stylesheet" href="./css/style.min.css" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon/favicon-32.png" />
   </head>
   <body class="page__body">
     <div class="intro intro--main">
@@ -27,21 +27,24 @@
               </svg>
 
               <svg class="header__logo-desktop pink-logo" width="147" height="40">
-                <use href="./img/svg/sprite.svg#header-logo-desktop"></use>
+                <use href="../img/svg/sprite.svg#header-logo-desktop"></use>
               </svg>
             </a>
             <button class="header__toggle" type="button" aria-label="Открыть/закрыть меню">
-              <svg width="50" height="24">
-                <use href="./img/svg/sprite.svg#navigation-toggle"></use>
+              <svg class="header__open-icon" width="50" height="24">
+                <use href="./img/svg/sprite.svg#navigation-toggle-open"></use>
+              </svg>
+              <svg class="header__close-icon" width="23" height="23">
+                <use href="./img/svg/sprite.svg#navigation-toggle-close"></use>
               </svg>
             </button>
-            <!-- при нажатии кнопки добавляется класс "is-active" -->
-            <nav class="header__navigation navigation navigation--mobile">
+
+            <nav class="header__navigation navigation">
               <ul class="navigation__list">
-                <li class="navigation__list-item">
+                <li class="navigation__list-item navigation__list-item--active">
                   <a href="index.html"> Главная </a>
                 </li>
-                <li class="navigation__list-item navigation__list-item--active">
+                <li class="navigation__list-item">
                   <a href="catalog.html"> Фотографии </a>
                 </li>
                 <li class="navigation__list-item">
@@ -67,17 +70,17 @@
             <ul class="store__list">
               <li class="store__item">
                 <a class="store__link" href="#" aria-label="apple">
-                  <img src="img/content/apple-logo.svg" width="46" height="57" alt="App Store." />
+                  <img src="img/svg/apple-logo.svg" width="46" height="57" alt="App Store." />
                 </a>
               </li>
               <li class="store__item">
                 <a class="store__link" href="#" aria-label="Android">
-                  <img src="img/content/android-logo.svg" width="42" height="47" alt="Android icon." />
+                  <img src="img/svg/android-logo.svg" width="42" height="47" alt="Android icon." />
                 </a>
               </li>
               <li class="store__item">
                 <a class="store__link" href="#" aria-label="Windows">
-                  <img src="img/content/microsoft-logo.svg" width="44" height="42" alt="windows icon." />
+                  <img src="img/svg/microsoft-logo.svg" width="44" height="42" alt="windows icon." />
                 </a>
               </li>
             </ul>
@@ -299,7 +302,7 @@
             </li>
             <li class="contacts__item contacts__item--email">
               <h3 class="contacts__term">Пишите:</h3>
-              <a class="contacts__description" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+              <a class="contacts__description contacts__description--email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
             </li>
             <li class="contacts__item contacts__item--visit">
               <h3 class="contacts__term contacts__term">Приезжайте в гости:</h3>
@@ -322,11 +325,11 @@
       <div class="page-footer__wrapper container">
         <a class="page-footer__logo" href="#" aria-label="Логотип сайта Pink">
 
-          <svg class="page-footer__svg page-footer__svg--mobile pink-logo" width="145" height="40">
+          <svg class="page-footer__svg page-footer__svg--mobile pink-logo pink-logo--footer" width="145" height="40">
             <use href="./img/svg/sprite.svg#footer-logo-mobile"></use>
           </svg>
 
-          <svg class="page-footer__svg page-footer__svg--desktop pink-logo" width="147" height="40">
+          <svg class="page-footer__svg page-footer__svg--desktop pink-logo pink-logo--footer" width="147" height="40">
             <use href="./img/svg/sprite.svg#footer-logo-desktop"></use>
           </svg>
 
@@ -366,5 +369,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/index.js"></script>
   </body>
 </html>
