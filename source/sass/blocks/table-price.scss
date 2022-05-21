@@ -1,16 +1,16 @@
 .table-price {
   max-width: 940px;
+  margin-bottom: 20px;
 
   border-spacing: 0;
-  margin-bottom: 60px;
 }
 
 .table-price__header-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-width: 280px;
-  padding: 19px 0 30px 0;
+  min-width: 276px;
+  padding: 9px 0 27px 0;
 
   color: $color-white;
   text-transform: uppercase;
@@ -20,13 +20,13 @@
 
 
   @media (min-width: $tablet-width) {
-    padding: 19px 0 16px 0;
-    min-width: 152px;
+    min-width: 149px;
+    padding: 10px 0 5px 0;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 23px 67px 25px 67px;
     min-width: 234px;
+    padding: 14px 55px 18px 60px;
   }
 }
 
@@ -43,32 +43,60 @@
     position: relative;
 
     &::before {
-      position: absolute;
       content: url("../img/svg/hit.svg");
+      position: absolute;
+      top: 1px;
+      left: -1px;
+
       width: 74px;
       height: 74px;
-      left: -1px;
-      top: 1px;
+
+      @media (min-width: $tablet-width) {
+        content: url("../img/svg/hit-tablet.svg");
+
+        width: 61px;
+        height: 61px;
+      }
+
+      @media (min-width: $desktop-width) {
+        content: url("../img/svg/hit.svg");
+        left: 3px;
+
+        width: 74px;
+        height: 74px;
+      }
     }
   }
 }
 
 .table-price__license-type {
+  margin-bottom: -3px;
+
   font-weight: 700;
   font-size: 16px;
   line-height: 30px;
   color: $color-white;
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 1px;
+
+    font-size: 18px;
+  }
 }
 
 .table-price__license-price {
   font-weight: 300;
   font-size: 18px;
   line-height: 30px;
+
+  @media (min-width: $desktop-width) {
+    font-size: 24px;
+  }
 }
 
 .table-price__text {
   display: block;
-  padding: 24px 125px 25px 20px;
+  padding: 11px 110px 14px 18px;
 
   font-size: 14px;
   line-height: 30px;
@@ -82,6 +110,7 @@
 
 .table-price__cell {
   position: relative;
+
   font-weight: 400;
   font-size: 14px;
   line-height: 30px;
@@ -91,11 +120,12 @@
 
   @media (min-width: $tablet-width) {
     min-width: 152px;
-    padding: 18px 15px 17px 15px;
+    padding: 8px 15px 5px 15px;
   }
 
   @media (min-width: $desktop-width) {
     min-width: 233px;
+    padding: 12px 20px 15px;
 
     font-size: 18px;
   }
@@ -113,33 +143,38 @@
 .table-price__feature-value {
   &--false::before {
     content: url("../img/svg/no.svg");
-    margin: 0 auto;
     position: absolute;
-    top: 33%;
-    left: 80%;
+    top: 23%;
+    left: 84%;
+
+    margin: 0 auto;
 
     @media (min-width: $tablet-width) {
-      left: 43%;
+      top: 21%;
+      left: 41%;
     }
 
     @media (min-width: $desktop-width) {
-      left: 46%;
+      top: 25%;
+      left: 45%;
     }
   }
 
   &--true::before {
     content: url("../img/svg/yes.svg");
-    margin: 0 auto;
     position: absolute;
-    top: 33%;
-    left: 80%;
+    top: 27%;
+    left: 83%;
+
+    margin: 0 auto;
 
     @media (min-width: $tablet-width) {
-      left: 43%;
+      left: 40%;
     }
 
     @media (min-width: $desktop-width) {
-      left: 46%;
+      top: 27%;
+      left: 44%;
     }
   }
 }

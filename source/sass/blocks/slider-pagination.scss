@@ -2,22 +2,24 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 70px;
   margin: 20px auto;
 }
 
 .slider-pagination__control {
   width: 6px;
   height: 6px;
+  margin: 0 5px;
   padding: 0;
 
   background-color: rgba($color-midnight, 0.3);
   border: none;
   border-radius: 50%;
-  margin: 0 5px;
 
   &--current {
-    background-color: $color-white;
     padding: 2px;
+
+    background-color: $color-white;
     border: 3px solid $color-midnight;
   }
 

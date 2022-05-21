@@ -1,15 +1,17 @@
 .map {
   width: 100%;
   height: 200px;
-  clip-path: polygon(50% 15%, 100% 0, 100% 100%, 0 100%, 0 0);
+  clip-path: polygon(50% 16%, 100% 0, 100% 100%, 0 100%, 0 0);
   background-image: url("../img/backgrounds/map.jpg");
 
   @media (min-width: $tablet-width) {
     height: 374px;
+    clip-path: polygon(50% 18%, 100% 0, 100% 100%, 0 100%, 0 0);
   }
 
   @media (min-width: $desktop-width) {
     height: 502px;
+    clip-path: polygon(50% 21%, 100% 0, 100% 100%, 0 100%, 0 0);
   }
 }
 

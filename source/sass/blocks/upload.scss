@@ -1,20 +1,35 @@
 .upload {
-  padding: 49px 0 41px 0;
+  padding: 33px 0 0 0;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 49px;
+    padding-bottom: 2px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 43px;
+  }
 }
 
 .upload__title {
   margin: 0;
-  margin-bottom: 52px;
+  margin-bottom: 42px;
 
   font-weight: 400;
   font-size: 14px;
-  line-height: 24px;
+  line-height: 30px;
   text-align: center;
 
   @media (min-width: $tablet-width) {
+    margin-bottom: 70px;
     padding: 0 95px;
 
     font-size: 18px;
+    line-height: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 67px;
   }
 }
 
@@ -28,23 +43,25 @@
 
 .upload-wrapper {
   padding-top: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 39px;
 
   @media (min-width: $tablet-width) {
     display: flex;
     padding-top: 57px;
-    padding-bottom: 54px;
+    padding-right: 18px;
+    padding-bottom: 34px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 57px 60px 57px 80px;
+    margin-bottom: 26px;
+    padding: 57px 60px 37px 80px;
 
     background-color: $color-white-smoke;
   }
 }
 
 .upload__image {
-  margin-bottom: 20px;
+  margin-bottom: 43px;
 
   @media (min-width: $tablet-width) {
     margin-right: 47px;
@@ -74,11 +91,12 @@
 
   @media (min-width: $tablet-width) {
     flex-direction: row;
-    margin-bottom: 67px;
+    margin-bottom: 66px;
+    overflow: hidden;
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 167px;
+    margin-bottom: 145px;
   }
 }
 
@@ -87,7 +105,7 @@
   justify-content: space-between;
   align-self: center;
   width: 200px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 
   @media (min-width: $tablet-width) {
     flex-direction: column;
@@ -102,19 +120,18 @@
     display: flex;
     flex-grow: 1;
     flex-direction: column;
-    justify-content: space-between;
     min-height: 72px;
-    padding: 15px 0;
+    padding: 10px 0;
   }
 }
 
 .upload__controls-range {
   position: relative;
+  left: 20px;
 
   display: none;
-  width: 100%;
+  width: 240px;
   height: 20px;
-  overflow: hidden;
 
   background-color: transparent;
   outline: none;
@@ -123,12 +140,26 @@
      -moz-appearance: none;
           appearance: none;
 
+  &:not(:last-child) {
+    margin-bottom: 30px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 52px;
+    }
+  }
+
   &--current {
     display: block;
   }
 
   @media (min-width: $tablet-width) {
     display: block;
+    width: 202px;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 288px;
+    margin-left: 32px;
   }
 }
 
@@ -141,9 +172,9 @@
 .upload__controls-range::-webkit-slider-thumb {
   z-index: 1;
 
-  width: 10px;
-  height: 10px;
-  margin-top: -4px;
+  width: 14px;
+  height: 14px;
+  margin-top: -6px;
 
   background: $color-white;
   border: 2px solid $color-cerise;
@@ -185,20 +216,25 @@
 }
 
 .upload__controls-range::before {
-  z-index: 1;
-  display: none;
-  position: absolute;
   content: "";
+  position: absolute;
+  top: 45px;
+  left: -50px;
+  z-index: 1;
+
+  width: 330px;
   height: 1px;
-  width: 275px;
+
   background-color: rgba($color-midnight, 0.1);
 
   @media (min-width: $tablet-width) {
-    display: block;
+    top: 46px;
+    left: -55px;
   }
 
   @media (min-width: $desktop-width) {
-    width: 410px;
+    top: 46px;
+    left: -92px;
   }
 }
 
@@ -220,19 +256,53 @@
 }
 
 .upload__controls-button-icon {
+  position: relative;
+
   opacity: 0.3;
 
   fill: $color-midnight;
+
+  &--crop {
+    left: -4px;
+  }
 
   @media (min-width: $tablet-width) {
     transform: scale(0.5);
     opacity: 1;
 
     fill: $color-cerise;
+
+    &--crop {
+      top: -2px;
+      left: -4px;
+    }
+
+    &--fill {
+      top: -6px;
+      left: -4px;
+    }
+
+    &--contrast {
+      top: -14px;
+      left: -4px;
+    }
   }
 
   @media (min-width: $desktop-width) {
     transform: scale(1);
+
+    &--crop {
+      left: -2px;
+    }
+
+    &--fill {
+      top: -8px;
+      left: 0;
+    }
+
+    &--contrast {
+      left: -2px;
+    }
   }
 
   &:hover {
@@ -266,6 +336,7 @@
   @media (min-width: $desktop-width) {
     flex-direction: row;
     justify-content: space-between;
+    width: 398px;
   }
 }
 
@@ -277,13 +348,22 @@
   border: 3px solid $color-cerise;
 
   &:hover {
-    background-color: $color-cerise;
     color: $color-white;
+
+    background-color: $color-cerise;
   }
 
   &:active {
-    background-color: $color-cerise;
     color: rgba($color-white, 0.3);
+
+    background-color: $color-cerise;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 260px;
+    margin-right: -12px;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
   }
 
   @media (min-width: $desktop-width) {
@@ -301,9 +381,16 @@
   }
 
   &:active {
-    opacity: 0.3;
-    background-color: $color-midnight;
     color: $color-white;
+
+    background-color: $color-midnight;
+    opacity: 0.3;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 260px;
+    margin-right: -12px;
+    padding-bottom: 16px;
   }
 
   @media (min-width: $desktop-width) {

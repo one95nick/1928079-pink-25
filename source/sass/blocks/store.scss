@@ -9,54 +9,90 @@
 }
 
 .store__content {
-  padding: 28px 20px 38px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   max-width: 310px;
+  padding: 28px 20px 31px 20px;
 
   @media (min-width: $tablet-width) {
+    margin-left: -6px;
     padding: 0;
   }
 }
 
 .store__button {
   width: 280px;
-  margin-bottom: 32px;
+  margin-bottom: 31px;
 
   border: 3px solid #ffffff;
 
   &:hover {
-    background-color: $color-white;
     color: $color-cerise;
+
+    background-color: $color-white;
   }
 
   &:active {
-    background-color: $color-white;
     color: rgba($color-cerise, 0.3);
+
+    background-color: $color-white;
   }
 
   @media (min-width: $tablet-width) {
-    width: 300px;
     z-index: 1;
+
+    width: 300px;
+    margin-bottom: 46px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 72px;
+
+    font-size: 21px;
+    line-height: 18px;
   }
 }
 
 .store__list {
+  z-index: 1;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
   align-self: center;
-  width: 200px;
+  width: 204px;
   margin: 0;
-  margin-bottom: 28px;
+  margin-bottom: 22px;
   padding: 0;
 
   list-style-type: none;
-  z-index: 1;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 32px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 51px;
+  }
+}
+
+.store__microsoft {
+  margin-top: 7px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 0;
+  }
+}
+
+.store__apple {
+  @media (min-width: $tablet-width) {
+    margin-top: -4px;
+  }
 }
 
 .store__description {
+  max-width: 230px;
   margin: 0;
   padding: 0;
 
@@ -64,13 +100,17 @@
   font-size: 14px;
   line-height: 24px;
   text-align: center;
-  max-width: 230px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 100px;
+    z-index: 1;
+
     max-width: 300px;
+    margin-bottom: 114px;
 
     font-size: 18px;
-    z-index: 1;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 125px;
   }
 }

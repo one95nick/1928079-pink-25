@@ -2,25 +2,33 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 20px;
+  padding-top: 39px;
   padding-bottom: 20px;
 
   @media (min-width: $tablet-width) {
     flex-direction: row;
-    justify-content: space-between;
+    padding-top: 34px;
+    padding-bottom: 20px;
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 70px;
+    padding-top: 71px;
     padding-bottom: 70px;
   }
 }
 
 .page-footer__logo {
-  margin-bottom: 30px;
+  margin-bottom: 35px;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 0;
+    margin-top: -12px;
+    margin-right: 74px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: -16px;
+    margin-right: 232px;
   }
 }
 
@@ -43,7 +51,7 @@
 .page-footer__social {
   display: grid;
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 37px;
   padding: 0;
 
   list-style-type: none;
@@ -53,6 +61,12 @@
 
   @media (min-width: $tablet-width) {
     margin-bottom: 0;
+    margin-right: 101px;
+    width: 170px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 238px;
   }
 }
 
@@ -89,7 +103,13 @@
 
 .page-footer__copyright-text {
   display: block;
-  margin-right: 10px;
+  margin-right: 15px;
+  font-size: 14px;
+  line-height: 18px;
+
+  @media (min-width: $desktop-width) {
+    font-size: 18px;
+  }
 }
 
 .page-footer__copyright-icon {

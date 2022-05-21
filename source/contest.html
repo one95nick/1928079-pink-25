@@ -57,13 +57,13 @@
           </div>
         </header>
         <div class="container">
-          <h1 class="intro__title intro__title--inner">Конкурс на самое безбашенное путешествие с Пинк</h1>
+          <h1 class="intro__title intro__title--inner intro__title--contest">Конкурс на самое безбашенное путешествие с Пинк</h1>
         </div>
       </div>
     </div>
     <main class="contest">
       <div class="contest__description-wrapper container">
-        <h2 class="contest__description">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000&nbsp;миль&nbsp;на вашу&nbsp;бонусную&nbsp;карту!
+        <h2 class="contest__description">Поделитесь своей историей и получите шанс выиграть ценный приз&nbsp;—&nbsp;1000 миль на вашу&nbsp;бонусную&nbsp;карту!
         <span class="contest__description-tablet">Пожалуйста, заполните форму ниже:</span></h2>
       </div>
       <form class="contest__form" action="https://echo.htmlacademy.ru/" method="post">
@@ -143,7 +143,7 @@
 
         <div class="contest__form-contacts">
           <fieldset class="contest__form-fieldset">
-            <legend class="contest__legend">Контактная информация</legend>
+            <legend class="contest__legend contest__legend--contacts">Контактная информация</legend>
 
             <ul class="contest__contacts-list">
               <li class="contest__contacts-item contest__contacts-item--phone">
@@ -205,7 +205,7 @@
 
         <div class="contest__form-submit">
           <button class="contest__submit-button button button--squared" type="submit">Отправить форму</button>
-          <p class="contest__submit-notification"><span class="contest__star-required">*</span> — обязательные поля</p>
+          <p class="contest__submit-notification"><span class="contest__star-required">*</span> — обязательные <span class="contest__submit-text" >для заполнения</span> поля</p>
         </div>
       </form>
     </main>
@@ -258,8 +258,8 @@
         </div>
       </div>
     </footer>
-    <!-- открывается при добавлении класса "is-active" -->
-    <div class="modal-form modal-form--failure">
+    <!-- открывается при удалении класса "modal-form--hidden" -->
+    <div class="modal-form modal-form--failure modal-form--hidden">
       <div class="modal-form__wrapper">
         <h3 class="modal-form__title">Что-то пошло не так!</h3>
         <p class="modal-form__text modal-form__text--failure">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
@@ -267,14 +267,14 @@
       </div>
     </div>
 
-    <!-- открывается при добавлении класса "is-active" -->
-    <div class="modal-form modal-form--success">
+    <!-- открывается при удалении класса "modal-form--hidden" -->
+    <div class="modal-form modal-form--success modal-form--hidden">
       <div class="modal-form__wrapper">
         <h3 class="modal-form__title">Ваша заявка отправлена</h3>
-        <p class="modal-form__text modal-form__text--success">Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим ее и оповестим вас.</p>
+        <p class="modal-form__text modal-form__text--success">Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее&nbsp;время&nbsp;мырассмотрим ее&nbsp;и&nbsp;оповестим&nbsp;вас.</p>
       </div>
       <div class="modal-form__button-wrapper">
-      <button class="modal-form__button button button--squared modal-form__button-success">Закрыть окно</button>
+        <button class="modal-form__button button button--squared modal-form__button-success">Закрыть окно</button>
       </div>
     </div>
     <script src="./js/index.js"></script>
