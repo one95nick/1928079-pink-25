@@ -362,7 +362,6 @@
 
   list-style-type: none;
 
-
   @media (min-width: $tablet-width) {
     margin-top: -2px;
     padding-right: 60px;
@@ -460,6 +459,7 @@
   padding-bottom: 14px;
   padding-left: 20px;
 
+
   font-size: 18px;
   line-height: 30px;
 
@@ -556,6 +556,10 @@
   font-size: 18px;
   line-height: 30px;
   color: $color-midnight;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 62px;
+  }
 }
 
 .contest__platform-label .contest__form-control-mark {
@@ -623,6 +627,7 @@
   width: 100%;
   min-height: 201px;
   padding: 13px 25px 22px 20px;
+
 
   font-weight: 400;
   font-size: 18px;
