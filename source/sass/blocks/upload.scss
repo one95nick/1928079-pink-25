@@ -1,19 +1,35 @@
 .upload {
-  padding: 49px 0 41px 0;
+  padding: 33px 0 0 0;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 49px;
+    padding-bottom: 2px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 43px;
+  }
 }
 
 .upload__title {
   margin: 0;
-  margin-bottom: 52px;
+  margin-bottom: 42px;
 
   font-weight: 400;
   font-size: 14px;
-  line-height: 24px;
+  line-height: 30px;
   text-align: center;
 
   @media (min-width: $tablet-width) {
-    font-size: 18px;
+    margin-bottom: 70px;
     padding: 0 95px;
+
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 67px;
   }
 }
 
@@ -27,15 +43,34 @@
 
 .upload-wrapper {
   padding-top: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 39px;
 
   @media (min-width: $tablet-width) {
     display: flex;
+    padding-top: 57px;
+    padding-right: 18px;
+    padding-bottom: 10px;
   }
 
   @media (min-width: $desktop-width) {
+    margin-bottom: 26px;
+    padding: 57px 60px 14px 80px;
+
     background-color: $color-white-smoke;
-    padding: 57px 60px 57px 80px;
+  }
+}
+
+.upload__image {
+  margin-right: auto;
+  margin-bottom: 43px;
+  margin-left: auto;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 47px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 90px;
   }
 }
 
@@ -47,39 +82,264 @@
   }
 }
 
-.upload__form-controls {
-  flex-grow: 1;
-}
-
 .upload__controls-wrapper {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   margin-bottom: 34px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 67px;
+    flex-direction: row;
+    margin-bottom: 66px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 167px;
-
+    margin-bottom: 145px;
+    min-width: 410px;
+    overflow: hidden;
   }
 }
 
 .upload__buttons-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+  width: 200px;
+  margin-bottom: 30px;
+
   @media (min-width: $tablet-width) {
-    display: flex;
-    justify-content: space-between;
-    min-height: 72px;
+    flex-direction: column;
+    width: 60px;
+    min-height: 200px;
+    margin-bottom: 0;
   }
 }
 
+.upload__range-wrapper {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    min-height: 72px;
+    padding: 10px 0;
+  }
+}
+
+.upload__controls-range {
+  position: relative;
+
+  display: none;
+  width: 240px;
+  height: 20px;
+  margin: 0 auto;
+
+  background-color: transparent;
+  outline: none;
+
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+
+  &:not(:last-child) {
+    margin-bottom: 30px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 52px;
+      margin-right: 0;
+    }
+  }
+
+  &--current {
+    display: block;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    width: 202px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 288px;
+    margin-left: 32px;
+  }
+}
+
+.upload__controls-range::-webkit-slider-runnable-track {
+  height: 2px;
+
+  background-color: $color-midnight;
+}
+
+.upload__controls-range::-webkit-slider-thumb {
+  z-index: 1;
+
+  width: 14px;
+  height: 14px;
+  margin-top: -6px;
+
+  background: $color-white;
+  border: 2px solid $color-cerise;
+  border-radius: 50%;
+  cursor: pointer;
+
+  -webkit-appearance: none;
+
+
+  &:active {
+    background-color: $color-cerise;
+  }
+}
+
+.upload__controls-range::-moz-range-track {
+  height: 2px;
+
+  background-color: $color-midnight;
+}
+
+
+.upload__controls-range::-moz-range-thumb {
+  width: 10px;
+  height: 10px;
+  margin: 0;
+  margin-top: -4px;
+  padding: 0;
+
+  background: $color-white;
+  border: 2px solid $color-cerise;
+  border-radius: 50%;
+  cursor: pointer;
+
+  -webkit-appearance: none;
+
+  &:active {
+    background-color: $color-cerise;
+  }
+}
+
+.upload__controls-range::before {
+  content: "";
+  position: absolute;
+  top: 45px;
+  left: -70px;
+  z-index: 1;
+
+  width: 330px;
+  height: 1px;
+
+  background-color: rgba($color-midnight, 0.1);
+
+  @media (min-width: $tablet-width) {
+    top: 46px;
+    left: -55px;
+    width: 275px;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 46px;
+    left: -92px;
+    width: 410px;
+  }
+
+  &:last-child {
+    @media (min-width: $desktop-width) {
+      display: none;
+    }
+  }
+}
+
+.upload__controls-range:last-child::before {
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
+
 .upload__controls-button {
+  width: 48px;
+  height: 43px;
+  padding: 0;
+
+  background: transparent;
+  border: none;
+
   @media (min-width: $tablet-width) {
     margin-right: 45px;
   }
 
   @media (min-width: $desktop-width) {
     margin-right: 45px;
+  }
+}
+
+.upload__controls-button-icon {
+  position: relative;
+
+  opacity: 0.3;
+
+  fill: $color-midnight;
+
+  &--crop {
+    left: -4px;
+  }
+
+  @media (min-width: $tablet-width) {
+    transform: scale(0.5);
+    opacity: 1;
+
+    fill: $color-cerise;
+
+    &--crop {
+      top: -2px;
+      left: -4px;
+    }
+
+    &--fill {
+      top: -6px;
+      left: -4px;
+    }
+
+    &--contrast {
+      top: -14px;
+      left: -4px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    transform: scale(1);
+
+    &--crop {
+      left: -2px;
+    }
+
+    &--fill {
+      top: -8px;
+      left: 0;
+    }
+
+    &--contrast {
+      left: -2px;
+    }
+  }
+
+  &:hover {
+    opacity: 0.5;
+
+    @media (min-width: $tablet-width) {
+      opacity: 1;
+    }
+  }
+
+  &--current {
+    opacity: 1;
+
+    fill: $color-cerise;
+
+    &:hover {
+      opacity: 1;
+
+      @media (min-width: $tablet-width) {
+        opacity: 1;
+      }
+    }
   }
 }
 
@@ -91,16 +351,7 @@
   @media (min-width: $desktop-width) {
     flex-direction: row;
     justify-content: space-between;
-  }
-}
-
-.upload__controls-range {
-  @media (min-width: $tablet-width) {
-    min-width: 200px;
-  }
-
-  @media (min-width: $desktop-width) {
-    min-width: 290px;
+    width: 398px;
   }
 }
 
@@ -111,6 +362,25 @@
 
   border: 3px solid $color-cerise;
 
+  &:hover {
+    color: $color-white;
+
+    background-color: $color-cerise;
+  }
+
+  &:active {
+    color: rgba($color-white, 0.3);
+
+    background-color: $color-cerise;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 260px;
+    margin-right: -12px;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+  }
+
   @media (min-width: $desktop-width) {
     width: 183px;
     margin-bottom: 0;
@@ -120,6 +390,23 @@
 .upload__form-reset {
   border: 3px solid $color-midnight;
   opacity: 0.1;
+
+  &:hover {
+    opacity: 0.3;
+  }
+
+  &:active {
+    color: $color-white;
+
+    background-color: $color-midnight;
+    opacity: 0.3;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 260px;
+    margin-right: -12px;
+    padding-bottom: 16px;
+  }
 
   @media (min-width: $desktop-width) {
     width: 183px;

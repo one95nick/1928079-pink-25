@@ -1,33 +1,134 @@
 .header {
+  position: relative;
   background-color: rgba($color-black, 0.3);
 }
 
-.header__wrapper {
-  display: flex;
-  align-items: center;
-  padding: 21px 20px 21px 20px;
+.header.is-active {
+  background-color: $color-midnight;
+  border-bottom: 1px solid $color-black;
 
   @media (min-width: $desktop-width) {
-    padding: 27px 130px 43px 130px;
+    background-color: rgba($color-black, 0.3);
+  }
+}
+
+.header__close-icon {
+  display: none;
+}
+
+.header__open-icon {
+  display: block;
+}
+
+.header.is-active .header__navigation {
+  display: block;
+}
+
+.header.is-active .header__close-icon {
+  display: block;
+}
+
+.header.is-active .header__open-icon {
+  display: none;
+}
+
+
+.header__wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 22px 20px 18px 20px;
+
+  @media (min-width: $tablet-width) {
+    padding: 27px 20px 43px 20px;
+  }
+
+
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+    align-items: center;
+    padding: 27px 130px 29px 130px;
+  }
+}
+
+.header__logo {
+  max-width: 200px;
+
+  @media (min-width: $desktop-width) {
+    margin-right: 163px;
+    margin-top: -16px;
   }
 }
 
 .header__toggle {
+  fill: $color-white;
   margin-left: auto;
+  position: absolute;
+  top: 20px;
+  right: 26px;
+  width: 50px;
+  height: 24px;
+  border: none;
+  background-color: transparent;
+
+  @media (min-width: $tablet-width) {
+    top: 42px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+
+  &:hover {
+    fill: $color-cerise;
+  }
+
+  &:active {
+    fill: $color-cerise;
+    opacity: 0.3;
+  }
+}
+
+.header.is-active .header__toggle {
+  top: 22px;
+  right: 0;
+
+  @media (min-width: $tablet-width) {
+    top: 42px;
+    right: -1px;
+  }
+}
+
+.header__navigation {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+  }
+}
+
+.header__logo-mobile {
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.header__logo-tablet {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
 
   @media (min-width: $desktop-width) {
     display: none;
   }
 }
 
-.header__logo-mobile {
-  display: block;
-}
-
-.header__logo-tablet {
-  display: none;
-}
-
 .header__logo-desktop {
   display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
 }
+

@@ -1,5 +1,7 @@
 .photo__wrapper {
-  padding: 25px 25px 25px 17px;
+  position: relative;
+
+  padding: 19px 10px 52px 17px;
 
   font-size: 14px;
   line-height: 24px;
@@ -8,16 +10,39 @@
   background-color: $color-white-smoke;
 
   @media (min-width: $tablet-width) {
-    position: relative;
-    height: 155px;
     display: flex;
     flex-direction: column;
+    padding: 23px 10px 26px 30px;
+
+    &:not(:first-child) {
+      min-height: 155px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 25px 10px 23px 27px;
+  }
+}
+
+.photo__image {
+  max-width: 280px;
+
+  @media (min-width: $tablet-width) {
+    max-width: 300px;
+  }
+
+  &--main {
+    position: relative;
+
+    min-width: 100%;
+    margin: 0 auto;
   }
 }
 
 .photo__author {
   display: flex;
-  margin-bottom: 14px;
+  margin-bottom: 1px;
+  align-items: center;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 0;
@@ -39,51 +64,79 @@
 
 .photo__text {
   margin: 0;
-  margin-bottom: 27px;
-
-  @media (min-width: $tablet-width) {
-    margin-bottom: 10px;
-  }
 }
 
 .photo__likes {
+  position: absolute;
+
   display: flex;
-  align-content: center;
+  align-items: center;
+  bottom: 18px;
+  left: 16px;
 
   @media (min-width: $tablet-width) {
-    position: absolute;
-    bottom: 20px;
+    bottom: 23px;
+    left: 30px;
+
+    order: 2;
+    margin-right: 0;
 
     &--main {
-      top: 32px;
-      right: 20px;
+      bottom: 72px;
+      left: 472px;
     }
   }
 
+  @media (min-width: $desktop-width) {
+    bottom: 22px;
+    left: 27px;
+
+    &--main {
+      bottom: 47px;
+      left: 791px;
+    }
+  }
 }
 
 .photo__like-button {
-  margin-right: 18px;
-  width: 12px;
+  width: 14px;
   height: 20px;
+  margin-right: 18px;
+  padding: 0;
+
+  background-color: transparent;
+  background-image: url("../img/svg/heart.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
 
   @media (min-width: $tablet-width) {
+    position: absolute;
+    left: 226px;
+    bottom: 3px;
     order: 2;
     margin-right: 0;
+
+    &--main {
+      position: static;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    bottom: 2px;
+    left: 228px;
   }
 }
 
 .photo__like-count {
-  font-weight: 300;
+  font-weight: 400;
   font-size: 12px;
   color: $color-cerise;
   text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
-    margin-right: 140px;
-
     &--main {
-      margin-right: 20px;
+      margin-right: 15px;
     }
   }
 }

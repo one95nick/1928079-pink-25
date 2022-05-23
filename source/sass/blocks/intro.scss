@@ -1,19 +1,81 @@
 .intro {
-  overflow: hidden;
+  position: relative;
+  z-index: 1;
 
   @media (min-width: $tablet-width) {
     background-color: $color-midnight;
-    background-image: url("../img/backgrounds/intro-background-mobile.jpg");
+    background-image: url("../img/backgrounds/intro-background-tablet.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/backgrounds/intro-background-tablet@2x.jpg");
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    background-image: url("../img/backgrounds/intro-background-desktop.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/backgrounds/intro-background-desktop@2x.jpg");
+    }
+  }
+
+  &--main::before {
+    @media (min-width: $tablet-width) {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: -5px;
+      z-index: -1;
+
+      width: 660px;
+      height: 550px;
+
+      background-image: url("../img/backgrounds/iphone-hand-tablet.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+
+      pointer-events: none;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/backgrounds/iphone-hand-tablet@2x.png");
+      }
+    }
+
+    @media (min-width: $desktop-width) {
+      content: "";
+      position: absolute;
+      right: 49.5%;
+      bottom: 0;
+
+      width: 1050px;
+      height: 645px;
+
+      background-image: url("../img/backgrounds/iphone-hand-desktop.png");
+      background-repeat: no-repeat;
+      background-position-x: center;
+      background-size: contain;
+      transform: translateX(56%);
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/backgrounds/iphone-hand-desktop@2x.png");
+      }
+    }
   }
 }
 
 .intro__wrapper {
+  position: relative;
+
   background-color: $color-midnight;
   background-image: url("../img/backgrounds/intro-background-mobile.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/backgrounds/intro-background-mobile@2x.jpg");
+  }
 
   @media (min-width: $tablet-width) {
     background: transparent;
@@ -27,15 +89,38 @@
   }
 }
 
+.intro__wrapper--main::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+
+  width: 258px;
+  height: 286px;
+
+  background-image: url("../img/backgrounds/iphone-hand-mobile.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 258px 286px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/backgrounds/iphone-hand-mobile@2x.png");
+  }
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
 .intro__title {
-  margin: 0;
+  max-width: 280px;
+  margin: 0 auto;
   padding: 0;
-  padding-top: 29px;
-  padding-bottom: 300px;
+  padding-top: 23px;
+  padding-bottom: 313px;
 
   font-weight: 300;
   font-size: 24px;
-  line-height: 33px;
+  line-height: 30px;
   text-align: center;
   color: $color-white;
 
@@ -43,15 +128,21 @@
     align-self: flex-start;
 
     @media (min-width: $tablet-width) {
+      max-width: 300px;
+      margin: 0;
+      padding-top: 94px;
+      padding-bottom: 30px;
+
       font-size: 40px;
       line-height: 48px;
-      padding: 102px 65% 32px 10%;
     }
 
     @media (min-width: $desktop-width) {
+      max-width: 100%;
       padding: 0;
-      padding-top: 102px;
+      padding-top: 99px;
       padding-right: 68%;
+      padding-bottom: 36px;
 
       font-size: 50px;
       line-height: 68px;
@@ -59,18 +150,35 @@
   }
 
   &--inner {
-    padding: 36px 26px 51px 26px;
+    padding: 29px 26px 76px 26px;
+
+    line-height: 32.7px;
+
+
+    @media (min-width: $tablet-width) {
+      max-width: 100%;
+      padding-top: 67px;
+      padding-bottom: 128px;
+
+      font-size: 50px;
+      line-height: 68px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-top: 58px;
+      padding-bottom: 89px;
+    }
   }
 
-  @media (min-width: $tablet-width) {
-    font-size: 50px;
-    line-height: 68px;
-    padding-top: 81px;
-    padding-bottom: 74px;
-  }
+  &--contest {
+    padding-bottom: 44px;
 
-  @media (min-width: $desktop-width) {
-    padding-top: 74px;
-    padding-bottom: 104px;
+    @media (min-width: $tablet-width) {
+      padding-bottom: 60px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-bottom: 89px;
+    }
   }
 }

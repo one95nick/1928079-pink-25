@@ -1,0 +1,15 @@
+.pink-logo {
+  fill: $color-white;
+
+  &--footer {
+    fill: $color-midnight;
+  }
+}
+
+.pink-logo:hover {
+  fill: $color-cerise;
+}
+
+.pink-logo:active {
+  opacity: 0.3;
+}

@@ -11,7 +11,7 @@
 
   &--rounded {
     width: 280px;
-    padding-top: 17px;
+    padding-top: 15px;
     padding-bottom: 17px;
 
     line-height: 18px;
@@ -28,5 +28,18 @@
     color: $color-white;
 
     background-color: $color-green;
+
+    &:hover {
+      background-color: $color-eucalyptus;
+    }
+
+    &:active {
+      background-color: $color-eucalyptus;
+      color: rgba($color-white, 0.3);
+    }
+
+    &:disabled {
+      background-color: $color-whisper;
+    }
   }
 }

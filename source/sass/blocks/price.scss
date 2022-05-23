@@ -1,10 +1,18 @@
 .price {
-  padding: 159px 0 98px 0;
+  padding: 99px 0 27px 0;
+  overflow: hidden;
 
   background-color: $color-white-smoke;
+  clip-path: polygon(0 3.5%, 100% 0, 100% 100%, 0% 100%);
 
   @media (min-width: $tablet-width) {
-    padding: 70px 0;
+    clip-path: polygon(0 10.5%, 100% 0, 100% 100%, 0% 100%);
+    padding: 97px 0 50px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    clip-path: polygon(0 19%, 100% 0, 100% 100%, 0% 100%);
+    padding: 156px 0 76px 0;
   }
 }
 
@@ -19,4 +27,10 @@
   @media (min-width: $tablet-width) {
     display: none;
   }
+}
+
+.price__table {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 }
