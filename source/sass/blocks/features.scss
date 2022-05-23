@@ -6,20 +6,49 @@
   clip-path: polygon(0 4%, 100% 0, 100% 100%, 0% 100%);
 
   @media (min-width: $tablet-width) {
-    clip-path: polygon(0 11%, 100% 0, 100% 100%, 0% 100%);
-  }
+    clip-path: none;
+    background-color: transparent;
 
-  @media (min-width: $desktop-width) {
-    clip-path: polygon(0 16%, 100% 0, 100% 100%, 0% 100%);
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: calc(100% - 80px);
+      background-color: $color-white-smoke;
+      left: 0;
+      top: 80px;
+      z-index: -1;
+
+      @media (min-width: $desktop-width) {
+        top: 100px;
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 80px;
+      background-color: $color-white-smoke;
+      left: 0;
+      top: 0;
+      z-index: -1;
+      clip-path: polygon(0 67%, 100% 0, 100% 100%, 0% 100%);
+
+      @media (min-width: $desktop-width) {
+        height: 100px;
+        clip-path: polygon(0 100%, 100% 0, 100% 100%, 0% 100%);
+      }
+    }
   }
 }
 
-.features__list-wrapper::before {
+.features__list::before {
   content: "";
   position: absolute;
   bottom: 0;
 
-  width: 100%;
+  width: 280px;
   height: 320px;
 
   background-image: url("../img/backgrounds/iphone-screen-mobile.png");
@@ -108,13 +137,10 @@
 
   list-style-type: none;
 
-  clip-path: polygon(0 4%, 100% 0, 100% 100%, 0% 100%);
-
   @media (min-width: $tablet-width) {
     max-width: 100%;
     padding: 76px 0 43px 50%;
-
-    clip-path: polygon(0 11%, 100% 0, 100% 100%, 0% 100%);
+    min-height: 487px;
   }
 
   @media (min-width: $desktop-width) {
@@ -148,7 +174,6 @@
       position: absolute;
       top: -297px;
       left: -35px;
-      z-index: -1;
 
       width: 300px;
       height: 300px;
@@ -169,7 +194,6 @@
       position: absolute;
       top: -297px;
       left: -33px;
-      z-index: -1;
 
       width: 300px;
       height: 300px;
@@ -191,7 +215,6 @@
       position: absolute;
       top: -297px;
       left: -33px;
-      z-index: -1;
 
       width: 300px;
       height: 300px;

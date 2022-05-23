@@ -87,8 +87,8 @@
   }
 
   &:active {
-    border: solid 3px $color-midnight;
-    opacity: 0.1;
+    border: solid 3px rgba($color-midnight, 0.3);
+    opacity: 0.3;
   }
 }
 
